@@ -1,96 +1,96 @@
 cartas:
 
   -
-    nome: Aborto
-    subtitulo: Determinação por lei do direito à interrupção da gravidez resultante de estupro ou que ofereça alto risco de morte à gestante.
-    ano: 1940
+    name: Aborto
+    subtitle: Determinação por lei do direito à interrupção da gravidez resultante de estupro ou que ofereça alto risco de morte à gestante.
+    year: 1940
     num: 1
-    descricao:
+    description:
       - 'Os artigos 124 a 128 do Decreto Lei 2848/40 (Código Penal) versam sobre todas as questões relativas ao aborto e estão descritos a seguir os casos em que não há punibilidade: "Art. 128 - Não se pune o aborto praticado por médico: (Vide ADPF 54) Aborto necessário I - se não há outro meio de salvar a vida da gestante; Aborto no caso de gravidez resultante de estupro II - se a gravidez resulta de estupro e o aborto é precedido de consentimento da gestante ou, quando incapaz, de seu representante legal."'
     links:
       -
-        texto: Decreto-Lei n. 2.848, de 7 de dezembro de 1940.
+        text: Decreto-Lei n. 2.848, de 7 de dezembro de 1940.
         url: http://www.planalto.gov.br/ccivil_03/decreto-lei/Del2848compilado.htm
 
   -
-    nome: Casamento com a pessoa escolhida
-    ano: 2013
+    name: Casamento com a pessoa escolhida
+    year: 2013
     num: 2
-    descricao:
+    description:
       - Em 2011, o Supremo Tribunal Federal equiparou a união homossexual à heterossexual e, em 2013, o Conselho Nacional de Justiça decidiu que os cartórios brasileiros seriam obrigados a casar pessoas do mesmo sexo.
       - Esta carta chama atenção para nossa mentalidade muitas vezes heteronormativa (um casal/casamento é necessariamente composto por um homem e uma mulher), que associa o direito de escolha da mulher apenas ao fato de não ser submetida a casamentos “arranjados”. Muitas vezes a escolha da mulher pode ser casar com outra mulher, infelizmente essa escolha só foi garantida recentemente.
     links:
       -
-        texto: ADI 4277/2011 do STF
+        text: ADI 4277/2011 do STF
         url: http://www.stf.jus.br/portal/processo/verProcessoAndamento.asp?incidente=11872
       -
-        texto: Resolução n. 175/2013 do CNJ
+        text: Resolução n. 175/2013 do CNJ
         url: http://www.cnj.jus.br///images/atos_normativos/resolucao/resolucao_175_14052013_16052013105518.pdf
       -
-        texto: Casamento gay cresce mais do que uniões héteros no Brasil
+        text: Casamento gay cresce mais do que uniões héteros no Brasil
         url: https://www.cartacapital.com.br/sociedade/casamento-gay-cresce-mais-do-que-unioes-heteros-no-brasil
 
   -
-    nome: Casamento sem exigência de virgindade
-    ano: 2002
+    name: Casamento sem exigência de virgindade
+    year: 2002
     num: 3
-    descricao:
+    description:
       - 'Segundo o Código Civil de 1916, capítulo IV (Dos Prazos da Prescrição), artigo 178, “Em dez dias, contados do casamento, a ação do marido para anular o matrimônio contraído com mulher já deflorada” era uma das situações em que poderia ocorrer a prescrição do casamento. Houve dois decretos após 1916 que alteravam este parágrafo, ambos emitidos por Getúlio Vargas: o primeiro, em 1935, estipulava que a data para prescrição fossecontada a partir do conhecimento do marido enganado - termo utilizado na grafia do próprio Decreto - e o segundo, em 1942, que revogava o anterior e estabelecia que a lei voltasse à grafia original. Em 2002, o Código Civil mudou a visão masculinizada da virgindade da mulher e acabou com o direito do homem de mover ação para anular o casamento se descobrisse que a mulher já havia sido “deflorada”. Do mesmo modo,acabou com o artigo que permitia aos pais utilizar a possível “desonestidade da filha” como motivo para deserdá-la da herança.'
     links:
       -
-        texto: Lei n. 3.071, de 1º de janeiro de 1916 (Código Civil)
+        text: Lei n. 3.071, de 1º de janeiro de 1916 (Código Civil)
         url: http://www.planalto.gov.br/ccivil_03/leis/L3071.htm
       -
-        texto: Decreto n. 13, de 29 de janeiro de 1935
+        text: Decreto n. 13, de 29 de janeiro de 1935
         url: http://www2.camara.leg.br/legin/fed/decret/1930-1939/decreto-13-29-janeiro-1935-557080-publicacaooriginal-77377-pl.html
       -
-        texto: Decreto-Lein. 5.059, de 8 de dezembro de 1942
+        text: Decreto-Lein. 5.059, de 8 de dezembro de 1942
         url: http://www.planalto.gov.br/ccivil_03/Decreto-Lei/1937-1946/Del5059.htm#art1
       -
-        texto: Lei n. 10.406, de 10 de janeiro de 2002
+        text: Lei n. 10.406, de 10 de janeiro de 2002
         url: http://www.planalto.gov.br/ccivil_03/leis/2002/L10406.htm
       -
-        texto: 'A mulher, o casamento e a sociedade brasileira dos séculos XX e XXI: Breve Comparativo Histórico'
+        text: 'A mulher, o casamento e a sociedade brasileira dos séculos XX e XXI: Breve Comparativo Histórico'
         url: http://www.egov.ufsc.br/portal/sites/default/files/anexos/33771-44077-1-PB.pdf
 
   -
-    nome: Cotas no Poder Judiciário
-    ano: x
+    name: Cotas no Poder Judiciário
+    year: x
     num: 4
-    descricao:
+    description:
       - A PEC 43/2016, ainda em tramitação, propõe a alteração do art. 94 para estabelecer a exigência de diversidade de gênero na composição das listas sêxtuplas e tríplices formadas para indicação de membros do Ministério Público e da advocacia para compor os Tribunais Regionais Federais, os Tribunais dos Estados, e do Distrito Federal e Territórios.
     links:
       -
-        texto: PEC garante presença feminina em listas de indicados para tribunais
+        text: PEC garante presença feminina em listas de indicados para tribunais
         url: http://www12.senado.leg.br/noticias/materias/2017/01/04/pec-garante-presenca-feminina-em-listas-de-indicados-para-tribunais
       -
-        texto: PROPOSTA DE EMENDA À CONSTITUIÇÃO nº 43, de 2016
+        text: PROPOSTA DE EMENDA À CONSTITUIÇÃO nº 43, de 2016
         url: http://www25.senado.leg.br/web/atividade/materias/-/materia/126710
 
   -
-    nome: Cotas para candidaturas do Legislativo
-    ano: 1995
+    name: Cotas para candidaturas do Legislativo
+    year: 1995
     num: 5
-    descricao: A Lei nº 9.100/1995 determinou que pelo menos 20% das vagas de cada partido ou coligação deveriam ser preenchidas por candidatas mulheres. A Lei nº 9.504/1997 (Lei das Eleições) determinou que no pleito geral de 1998 o percentual mínimo de cada sexo fosse de 25% e, para as eleições posteriores, a Lei (que vigora até hoje) fixou em 30%, no mínimo, a candidatura de cada sexo. Após quase 20 anos de vigência, esta cota mudou muito pouco o cenário geral da composição das casas legislativas quanto à relação de gênero, nas eleições de 2016, por exemplo, apenas 13% dos vereadores eleitos foram mulheres. Além disso, as mulheres ainda são utilizadas pelo dirigentes dos partidos como “candidatas laranjas” para poderem lançar mais candidaturas masculinas.
+    description: A Lei nº 9.100/1995 determinou que pelo menos 20% das vagas de cada partido ou coligação deveriam ser preenchidas por candidatas mulheres. A Lei nº 9.504/1997 (Lei das Eleições) determinou que no pleito geral de 1998 o percentual mínimo de cada sexo fosse de 25% e, para as eleições posteriores, a Lei (que vigora até hoje) fixou em 30%, no mínimo, a candidatura de cada sexo. Após quase 20 anos de vigência, esta cota mudou muito pouco o cenário geral da composição das casas legislativas quanto à relação de gênero, nas eleições de 2016, por exemplo, apenas 13% dos vereadores eleitos foram mulheres. Além disso, as mulheres ainda são utilizadas pelo dirigentes dos partidos como “candidatas laranjas” para poderem lançar mais candidaturas masculinas.
     links:
       -
-        texto: 'Série Inclusão: a conquista do voto feminino no Brasil'
+        text: 'Série Inclusão: a conquista do voto feminino no Brasil'
         url: http://www.tse.jus.br/imprensa/noticias-tse/2013/Abril/serie-inclusao-a-conquista-do-voto-feminino-no-brasil
       -
-        texto: LEI Nº 9.504, DE 30 DE SETEMBRO DE 1997
+        text: LEI Nº 9.504, DE 30 DE SETEMBRO DE 1997
         url: http://www.planalto.gov.br/ccivil_03/leis/L9504.htm
       -
-        texto: TSE apura 16 mil candidatos sem voto e uso de ‘laranjas’ para cumprir cota feminina
+        text: TSE apura 16 mil candidatos sem voto e uso de ‘laranjas’ para cumprir cota feminina
         url: https://noticias.uol.com.br/politica/ultimas-noticias/2016/12/14/ministerio-publico-investiga-128-candidatas-que-nao-receberam-nenhum-voto-no-rs.htm
       -
-        texto: A proporção de mulheres eleitas para o cargo de vereador se manteve entre as eleições de 2012 e de 2016, na faixa dos 13%, segundo dados do Tribunal Superior Eleitoral (TSE).
+        text: A proporção de mulheres eleitas para o cargo de vereador se manteve entre as eleições de 2012 e de 2016, na faixa dos 13%, segundo dados do Tribunal Superior Eleitoral (TSE).
         url: http://g1.globo.com/politica/eleicoes/2016/blog/eleicao-2016-em-numeros/post/proporcao-de-vereadoras-eleitas-se-mantem-apos-quatro-anos.html
 
   -
-    nome: Criminalização da discriminação por gênero
-    ano: x
+    name: Criminalização da discriminação por gênero
+    year: x
     num: 6
-    descricao:
+    description:
       - Embora a Constituição de 1988 garanta o princípio da igualdade, não há lei federal específica que estabeleça como crime ou determine penalidades em casos de discriminação por gênero. Em 2006, o PLC nº122 tentou alterar a Lei nº 7.716, de 5 de janeiro de 1989, o Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal) e o Decreto-Lei nº 5.452, de 1º de maio de 1943 (Consolidação das Leis do Trabalho – CLT) para definir os crimes resultantes de discriminação ou preconceito de gênero, sexo, orientação sexual e identidade de gênero.  Entretanto, este Projeto de Lei foi arquivado ao final da legislatura.
       - Em 2012, houve uma iniciativa da Comissão Especial de Juristas para alterar o artigo 1º da Lei 7.716/1989, conhecida como Lei do Racismo, com o objetivo de tornar crime inafiançável discriminar uma pessoa por ser mulher, homossexual ou nordestina. O texto já previa a punição para “discriminação ou preconceito de raça, cor, etnia, religião ou procedência nacional”, a proposta de alteração objetivava proibir a discriminação também por gênero, orientação sexual e procedência regional. A alteração não foi aprovada e o texto continua com a redação dada pela Lei nº 9.459, de 15/05/97.
       - No estado do Rio de Janeiro, por outro lado, houve um projeto de lei (nº 2054) em 2013 que estabelecia penalidades administrativas aos estabelecimentos e agentes públicos que discriminassem as pessoas em razão de sua orientação sexual e identidade de gênero. Em 2015, a Lei n. 7041 tornou real o que foi previsto por esse projeto de lei, mas alterou a redação para “discriminação às pessoas por preconceito de sexo e orientação sexual”.
@@ -101,346 +101,346 @@ cartas:
       - Leis específicas - como a Lei Maria da Penha - existem na tentativa de equilibrar relações sociais em que há diferença de privilégios e, a partir disso, pode haver opressão. Como na relação entre mulheres e homens, ou pessoas brancas e não-brancas. Uma vez formalizada e sancionada a lei, o Executivo e o Judiciário devem trabalhar juntos para garantir que ela seja seguida. Dentro do nosso cenário atual, compreende-se como necessidade a prática de garantir direitos via legislação, mas entende- se também a dificuldade em garanti-los a partir da aplicabilidade da lei.
     links:
       -
-        texto: 'Fonte: Folha de S.Paulo, Agora é Que São Elas - Molho Especial'
+        text: 'Fonte: Folha de S.Paulo, Agora é Que São Elas - Molho Especial'
         url: http://agoraequesaoelas.blogfolha.uol.com.br/2016/11/28/quem-faz-as-regras-do-jogo-da-politica-no-brasil/
       -
-        texto: PROJETO DE LEI DA CÂMARA nº 122, de 2006
+        text: PROJETO DE LEI DA CÂMARA nº 122, de 2006
         url: https://www25.senado.leg.br/web/atividade/materias/-/materia/79604
       -
-        texto: Discriminação contra gênero, opção sexual e procedência regional poderão fazer parte do Código Penal
+        text: Discriminação contra gênero, opção sexual e procedência regional poderão fazer parte do Código Penal
         url: http://www12.senado.leg.br/noticias/materias/2012/05/25/discriminacao-contra-genero-opcao-sexual-e-procedencia-regional-poderao-fazer-parte-do-codigo-penal
       -
-        texto: LEI Nº 7.716, DE 5 DE JANEIRO DE 1989
+        text: LEI Nº 7.716, DE 5 DE JANEIRO DE 1989
         url: http://www.planalto.gov.br/ccivil_03/leis/L7716.htm
       -
-        texto: Alerj aprova lei de combate à discriminação sexual no Rio
+        text: Alerj aprova lei de combate à discriminação sexual no Rio
         url: http://g1.globo.com/rio-de-janeiro/noticia/2015/06/alerj-aprova-lei-de-combate-discriminacao-sexual-no-rio.html
       -
-        texto: LEI Nº 7041 DE 15 DE JULHO DE 2015
+        text: LEI Nº 7041 DE 15 DE JULHO DE 2015
         url: http://bit.ly/2rw1aWT
       -
-        texto: LEI Nº 10.313, DE 20 DE MAIO DE 1999
+        text: LEI Nº 10.313, DE 20 DE MAIO DE 1999
         url: http://www.al.sp.gov.br/repositorio/legislacao/lei/1999/alteracao-lei-10313-20.05.1999.html
       -
-        texto: LEI Nº 14.363, DE 15 DE MARÇO DE 2011
+        text: LEI Nº 14.363, DE 15 DE MARÇO DE 2011
         url: http://www.al.sp.gov.br/repositorio/legislacao/lei/2011/lei-14363-15.03.2011.html
       -
-        texto: LEI Nº 12.284, DE 22 DE FEVEREIRO DE 2006
+        text: LEI Nº 12.284, DE 22 DE FEVEREIRO DE 2006
         url: http://www.al.sp.gov.br/repositorio/legislacao/lei/2006/lei-12284-22.02.2006.html
 
   -
-    nome: Criminalização da homofobia
-    ano: x
+    name: Criminalização da homofobia
+    year: x
     num: 7
-    descricao: Na CF de 88 é prevista a proibição de descriminação mediante orientação sexual, porém não existe ainda uma legislação vigente que regulamente isso. Em 2006, o PLC 122/2006 pretendia prever punição para discriminação por gênero, mas foi arquivado.
+    description: Na CF de 88 é prevista a proibição de descriminação mediante orientação sexual, porém não existe ainda uma legislação vigente que regulamente isso. Em 2006, o PLC 122/2006 pretendia prever punição para discriminação por gênero, mas foi arquivado.
     links:
-      texto: PROJETO DE LEI DA C MARA nº 122, de 2006 - (CRIMINALIZA A HOMOFOBIA)
+      text: PROJETO DE LEI DA C MARA nº 122, de 2006 - (CRIMINALIZA A HOMOFOBIA)
       url: https://www25.senado.leg.br/web/atividade/materias/-/materia/79604
 
   -
-    nome: Criminalização do racismo
-    ano: 1989
+    name: Criminalização do racismo
+    year: 1989
     num: 8
-    descricao: 'Na Constituição de 1988, o racismo é previsto como crime inafiançável. Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes: XLII - a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei; A Lei 7.716/1989 determina punição a quem comete crime de discriminação racial.'
+    description: 'Na Constituição de 1988, o racismo é previsto como crime inafiançável. Art. 5º Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade, nos termos seguintes: XLII - a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei; A Lei 7.716/1989 determina punição a quem comete crime de discriminação racial.'
     links:
       -
-        texto: Lei que criminaliza o racismo completa 25 anos
+        text: Lei que criminaliza o racismo completa 25 anos
         url: https://www.brasildefato.com.br/node/27017/
       -
-        texto: LEI Nº 7.716, DE 5 DE JANEIRO DE 1989.
+        text: LEI Nº 7.716, DE 5 DE JANEIRO DE 1989.
         url: http://www.planalto.gov.br/ccivil_03/leis/L7716.htm
 
   -
-    nome: Delegacia da Mulher
-    ano: 1985
+    name: Delegacia da Mulher
+    year: 1985
     num: 9
-    descricao: O Decreto n. 24.668, de 30 de janeiro de 1986 revogou o Decreto n. 23.769/1985 e criou as 1.ª, 2.ª, 3.ª, 4.ª e 5.ª Delegacias de Polícia de Defesa da Mulher. Em 1985, o Estado de São Paulo foi pioneiro no país na criação da primeira Delegacia de Defesa da Mulher (DDM). Atualmente, existem DDMs em todos os estados brasileiros.
+    description: O Decreto n. 24.668, de 30 de janeiro de 1986 revogou o Decreto n. 23.769/1985 e criou as 1.ª, 2.ª, 3.ª, 4.ª e 5.ª Delegacias de Polícia de Defesa da Mulher. Em 1985, o Estado de São Paulo foi pioneiro no país na criação da primeira Delegacia de Defesa da Mulher (DDM). Atualmente, existem DDMs em todos os estados brasileiros.
     links:
       -
-        texto: Decreto n. 24.668/1986
+        text: Decreto n. 24.668/1986
         url: http://www.al.sp.gov.br/repositorio/legislacao/decreto/1986/decreto-24668-30.01.1986.html
       -
-        texto: Decreto n. 23.769/1985
+        text: Decreto n. 23.769/1985
         url: http://www.al.sp.gov.br/repositorio/legislacao/decreto/1985/decreto-23769-06.08.1985.html
       -
-        texto: Mapeamento das Delegacias da Mulher no Brasil
+        text: Mapeamento das Delegacias da Mulher no Brasil
         url: https://www12.senado.leg.br/institucional/omv/entenda-a-violencia/pdfs/mapeamento-das-delegacias-da-mulher-no-brasil
   -
-    nome: Depósitos bancários no próprio nome
-    ano: 1934
+    name: Depósitos bancários no próprio nome
+    year: 1934
     num: 10
-    descricao:
+    description:
       - O imperador Dom Pedro II instituiu a poupança no Brasil em 1861. Dez anos depois, uma lei permitiu aos escravos* aplicar na poupança por meio de doações, herança ou renda proveniente de alguma espécie de trabalho. As mulheres casadas conquistaram a possibilidade de abrir uma conta poupança só em 1915, de acordo com Decreto n. 11.820, Art. 9º “A mulher casada, sob qualquer regimen, póde livremente instituir e retirar depositos em seu nome, salvo expressa opposição, por escripto, do marido, o qual não poderá retirar taes depositos sem prévia autorização, em devida fórma, da titular da caderneta ou supprimento judicial, nos termos do direito.”
       - 'Em 1934, o Decreto n. 24.427 autorizou as mulheres casadas a terem suas poupanças sem necesitarem da autorização de terceiros, conforme seu Art. 53: “A mulher casada sob qualquer regimen e os menores de mais de 16 (dezesseis) anos de idade, poderão fazer e movimentar depósitos nas Caixas Econômicas independentemente de quaisquer autorizações.”'
       - '*Não foram encontradas informações sobre as mulheres que eram escravas.'
     links:
       -
-        texto: Remuneração da poupança é atrelada à taxa básica de juros
+        text: Remuneração da poupança é atrelada à taxa básica de juros
         url: http://www.brasil.gov.br/economia-e-emprego/2009/11/remuneracao-da-poupanca-e-atrelada-a-taxa-basica-de-juros
       -
-        texto: Decreto n. 11.820/1915
+        text: Decreto n. 11.820/1915
         url: http://www2.camara.leg.br/legin/fed/decret/1910-1919/decreto-11820-15-dezembro-1915-511987-publicacaooriginal-1-pe.html
       -
-        texto: Decreto n. 24.427/1934
+        text: Decreto n. 24.427/1934
         url: http://legis.senado.gov.br/legislacao/ListaNormas.action?numero=24427&tipo_norma=DEC&data=19340619&link=s
 
   -
-    nome: Direito a Creche
-    ano: 1996
+    name: Direito a Creche
+    year: 1996
     num: 11
-    descricao: 'Em 1996, a Lei de Diretrizes e Bases (n.9394) estabeleceu no Art. 4º: “O dever do Estado com educação escolar pública será efetivado mediante a garantia de: (...) IV - atendimento gratuito em creches e pré-escolas às crianças de zero a seis anos de idade;”'
+    description: 'Em 1996, a Lei de Diretrizes e Bases (n.9394) estabeleceu no Art. 4º: “O dever do Estado com educação escolar pública será efetivado mediante a garantia de: (...) IV - atendimento gratuito em creches e pré-escolas às crianças de zero a seis anos de idade;”'
     links:
       -
-        texto: Lei de Diretrizes e Bases - Lei 9394/96
+        text: Lei de Diretrizes e Bases - Lei 9394/96
         url: http://www.planalto.gov.br/ccivil_03/leis/L9394.htm
 
   -
-    nome: Direito a decidir não ter filhos de forma autônoma
-    ano: x
+    name: Direito a decidir não ter filhos de forma autônoma
+    year: x
     num: 12
-    descricao: 'A LEI Nº 9.263, DE 12 DE JANEIRO DE 1996, que regula o § 7º do art. 226 da Constituição Federal, que trata do planejamento familiar, estabelece penalidades e, além de outras providências, estabelece em seu Art. 10: “Somente é permitida a esterilização voluntária nas seguintes situações: (Artigo vetado e mantido pelo Congresso Nacional - Mensagem nº 928, de 19.8.1997) I - em homens e mulheres com capacidade civil plena e maiores de vinte e cinco anos de idade ou, pelo menos, com dois filhos vivos, desde que observado o prazo mínimo de sessenta dias entre a manifestação da vontade e o ato cirúrgico, período no qual será propiciado à pessoa interessada acesso a serviço de regulação da fecundidade, incluindo aconselhamento por equipe multidisciplinar, visando desencorajar a esterilização precoce;”'
+    description: 'A LEI Nº 9.263, DE 12 DE JANEIRO DE 1996, que regula o § 7º do art. 226 da Constituição Federal, que trata do planejamento familiar, estabelece penalidades e, além de outras providências, estabelece em seu Art. 10: “Somente é permitida a esterilização voluntária nas seguintes situações: (Artigo vetado e mantido pelo Congresso Nacional - Mensagem nº 928, de 19.8.1997) I - em homens e mulheres com capacidade civil plena e maiores de vinte e cinco anos de idade ou, pelo menos, com dois filhos vivos, desde que observado o prazo mínimo de sessenta dias entre a manifestação da vontade e o ato cirúrgico, período no qual será propiciado à pessoa interessada acesso a serviço de regulação da fecundidade, incluindo aconselhamento por equipe multidisciplinar, visando desencorajar a esterilização precoce;”'
     links:
       -
-        texto: LEI Nº 9.263, DE 12 DE JANEIRO DE 1996
+        text: LEI Nº 9.263, DE 12 DE JANEIRO DE 1996
         url: http://www.planalto.gov.br/ccivil_03/leis/L9263.htm
 
   -
-    nome: Direito ao divórcio
-    ano: 1977
+    name: Direito ao divórcio
+    year: 1977
     num: 13
-    descricao: O casamento era indissolúvel, por isso o direito à Pensão Alimentícia surgiu muito antes. “Só havia o desquite – significando não quites, em débito para com a sociedade – que rompia a sociedade conjugal, mas não dissolvia o casamento”.
+    description: O casamento era indissolúvel, por isso o direito à Pensão Alimentícia surgiu muito antes. “Só havia o desquite – significando não quites, em débito para com a sociedade – que rompia a sociedade conjugal, mas não dissolvia o casamento”.
     links:
       -
-        texto: A LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977, regula os casos de dissolução da sociedade conjugal e do casamento, seus efeitos e respectivos processos, e dá outras providências. A mulher no Código Civil
+        text: A LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977, regula os casos de dissolução da sociedade conjugal e do casamento, seus efeitos e respectivos processos, e dá outras providências. A mulher no Código Civil
         url: http://www.mariaberenice.com.br/uploads/18_-_a_mulher_no_c%F3digo_civil.pdf
       -
-        texto: LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977
+        text: LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977
         url: http://www.planalto.gov.br/ccivil_03/leis/L6515.htm
 
   -
-    nome: Direito ao voto
-    ano: 1932
+    name: Direito ao voto
+    year: 1932
     num: 14
-    descricao: Aprovado pelo Decreto nº 21.076/1932 no governo Getúlio Vargas, dois anos depois foi assentado em bases constitucionais. Porém, a nova Constituição restringiu a votação feminina às mulheres que exerciam função pública remunerada. Apenas as mulheres que trabalhavam (aquelas que recebiam alguma remuneração) eram obrigadas a votar. Este direito foi ampliado efetivamente para todas as mulheres 14 anos depois, na Constituição de 1946 (artigo 133).
+    description: Aprovado pelo Decreto nº 21.076/1932 no governo Getúlio Vargas, dois anos depois foi assentado em bases constitucionais. Porém, a nova Constituição restringiu a votação feminina às mulheres que exerciam função pública remunerada. Apenas as mulheres que trabalhavam (aquelas que recebiam alguma remuneração) eram obrigadas a votar. Este direito foi ampliado efetivamente para todas as mulheres 14 anos depois, na Constituição de 1946 (artigo 133).
     links:
       -
-        texto: 'Série Inclusão: a conquista do voto feminino no Brasil'
+        text: 'Série Inclusão: a conquista do voto feminino no Brasil'
         url: http://www.tse.jus.br/imprensa/noticias-tse/2013/Abril/serie-inclusao-a-conquista-do-voto-feminino-no-brasil
       -
-        texto: Constituição dos Estados Unidos do Brasil, de 18 de Setembro de 1946.
+        text: Constituição dos Estados Unidos do Brasil, de 18 de Setembro de 1946.
         url: http://www.planalto.gov.br/ccivil_03/constituicao/constituicao46.htm
 
   -
-    nome: Direito da mulher casada a decidir trabalhar
-    ano: 1962
+    name: Direito da mulher casada a decidir trabalhar
+    year: 1962
     num: 15
-    descricao: O Código Civil de 1916 previa, no artigo 233 - Dos Direitos e Deveres do Marido - “O direito de autorizar a profissão da mulher e a sua residência fora do tecto conjugal”.  No ano de 1962 (por meio da Lei 4.121) foi aprovado o Estatuto da Mulher Casada que garantia entre muitas coisas que a mulher não precisaria mais pedir autorização ao marido para poder trabalhar, receber herança e no caso de separação poderia solicitar a guarda dos filhos.
+    description: O Código Civil de 1916 previa, no artigo 233 - Dos Direitos e Deveres do Marido - “O direito de autorizar a profissão da mulher e a sua residência fora do tecto conjugal”.  No ano de 1962 (por meio da Lei 4.121) foi aprovado o Estatuto da Mulher Casada que garantia entre muitas coisas que a mulher não precisaria mais pedir autorização ao marido para poder trabalhar, receber herança e no caso de separação poderia solicitar a guarda dos filhos.
     links:
       -
-        texto: O Estatuto da Mulher Casada de 1962
+        text: O Estatuto da Mulher Casada de 1962
         url: http://www.lume.ufrgs.br/handle/10183/90299
 
   -
-    nome: Fim da garantia por lei da restauração da “honra da mulher”, caso ela se casasse com seu estuprador
-    ano: 2005
+    name: Fim da garantia por lei da restauração da “honra da mulher”, caso ela se casasse com seu estuprador
+    year: 2005
     num: 16
-    descricao: A Lei 11.106, de 2005 alterou e anulou a redação de diversos artigos que se referiam a crimes contra a honra, entre essas alterações houve a revogação da extinção da pena por estupro caso o agressor se casasse com a vítima.
+    description: A Lei 11.106, de 2005 alterou e anulou a redação de diversos artigos que se referiam a crimes contra a honra, entre essas alterações houve a revogação da extinção da pena por estupro caso o agressor se casasse com a vítima.
     links:
       -
-        texto: LEI Nº 11.106, DE 28 DE MARÇO DE 2005.
+        text: LEI Nº 11.106, DE 28 DE MARÇO DE 2005.
         url: http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11106.htm
 
   -
-    nome: Fim da obrigatoriedade da adoção do nome do marido
-    ano: 1977
+    name: Fim da obrigatoriedade da adoção do nome do marido
+    year: 1977
     num: 17
-    descricao:
+    description:
       - A Lei n. 6.515, de 26 de dezembro de 1977, regula os casos de dissolução da sociedade conjugal e do casamento. O Art. 17 estabelece que “Vencida na ação de separação judicial (art. 5º “ caput “), voltará a mulher a usar o nome de solteira.” Esta mesma lei possibilitou que as mulheres pudessem manter seus nomes de solteira após o casamento porque adicionou um parágrafo único ao Art 240 do Código Civil de 1916 (“A mulher poderá acrescer ao seus os apelidos do marido.”). Em 1988, a nova Constituição Federal passa a consagrar a igualdade entre marido e mulher como direito fundamental, sendo prevista no artigo 226, parágrafo 5º (“Os direitos e deveres referentes à sociedade conjugal, são exercidos igualmente pelo homem e pela mulher.”). A partir de então, jurisprudência admitia que o marido adotasse o sobrenome da mulher pelo procedimento da via judicial.
       - Em 2002, a nova redação do Código Civil reforça a igualdade entre marido e mulher no artigo 1.565 (“Pelo casamento, homem e mulher assumem mutuamente a condição de consortes, companheiros e responsáveis pelos encargos da família.”), assegurando, claramente, que o marido possa adotar o sobrenome da mulher se desejar logo no parágrafo 1º (“Qualquer dos nubentes, querendo, poderá acrescer ao seu o sobrenome do outro.”).
     links:
       -
-        texto: LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977.
+        text: LEI Nº 6.515, DE 26 DE DEZEMBRO DE 1977.
         url: http://www.planalto.gov.br/ccivil_03/leis/L6515.htm
       -
-        texto: O nome da mulher no Direito de Família
+        text: O nome da mulher no Direito de Família
         url: http://www.ambito-juridico.com.br/site/index.php?n_link=revista_artigos_leitura&artigo_id=580
       -
-        texto: Abordagem constitucional sobre o Princípio da Igualdade dos cônjuges no casamento civil
+        text: Abordagem constitucional sobre o Princípio da Igualdade dos cônjuges no casamento civil
         url: http://www.ambito-juridico.com.br/site/index.php?n_link=revista_artigos_leitura&artigo_id=6583
       -
-        texto: O sobrenome da mulher
+        text: O sobrenome da mulher
         url: http://www1.folha.uol.com.br/fsp/cotidian/ff20109811.htm
       -
-        texto: Código Civil Brasileiro (2002)
+        text: Código Civil Brasileiro (2002)
         url: http://www.planalto.gov.br/ccivil_03/leis/2002/L10406.htm
 
   -
-    nome: Garantia da flexão de gênero na nomeação de profissões ou grau em diplomas
-    ano: 2012
+    name: Garantia da flexão de gênero na nomeação de profissões ou grau em diplomas
+    year: 2012
     num: 18
-    descricao: A Lei n. 12.605, de 3 de abril de 2012, determina o emprego obrigatório da flexão de gênero para nomear profissão ou grau em diplomas.
+    description: A Lei n. 12.605, de 3 de abril de 2012, determina o emprego obrigatório da flexão de gênero para nomear profissão ou grau em diplomas.
     links:
       -
-        texto: LEI Nº 12.605, DE 3 DE ABRIL DE 2012.
+        text: LEI Nº 12.605, DE 3 DE ABRIL DE 2012.
         url: http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12605.htm
 
   -
-    nome: Integração do trabalho doméstico à Previdência Social
-    ano: 2013
+    name: Integração do trabalho doméstico à Previdência Social
+    year: 2013
     num: 19
-    descricao: A Emenda Constitucional n. 72, de 2 de abril de 2013, altera a redação do parágrafo único do art. 7º da Constituição Federal para estabelecer a igualdade de direitos trabalhistas entre os trabalhadores domésticos e os demais trabalhadores urbanos e rurais. Antes disso, o direito à aposentadoria permanecia nas mãos do empregador.
+    description: A Emenda Constitucional n. 72, de 2 de abril de 2013, altera a redação do parágrafo único do art. 7º da Constituição Federal para estabelecer a igualdade de direitos trabalhistas entre os trabalhadores domésticos e os demais trabalhadores urbanos e rurais. Antes disso, o direito à aposentadoria permanecia nas mãos do empregador.
     links:
       -
-        texto: EMENDA CONSTITUCIONAL Nº 72, DE 2 DE ABRIL DE 2013
+        text: EMENDA CONSTITUCIONAL Nº 72, DE 2 DE ABRIL DE 2013
         url: http://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc72.htm
 
   -
-    nome: Jornada de trabalho variável conforme condições do ciclo menstrual
-    ano: x
+    name: Jornada de trabalho variável conforme condições do ciclo menstrual
+    year: x
     num: 20
-    descricao: Alguns países propõem essa política, como Japão, China, Coréia do Sul e outros. No Brasil, em 21/12/2016, o deputado Carlos Bezerra propôs um projeto (PL 6.784/2016) que dispõe sobre o afastamento do trabalho durante o período menstrual da empregada.
+    description: Alguns países propõem essa política, como Japão, China, Coréia do Sul e outros. No Brasil, em 21/12/2016, o deputado Carlos Bezerra propôs um projeto (PL 6.784/2016) que dispõe sobre o afastamento do trabalho durante o período menstrual da empregada.
     links:
       -
-        texto: Há países onde as mulheres podem faltar ao trabalho por causa das dores menstruais
+        text: Há países onde as mulheres podem faltar ao trabalho por causa das dores menstruais
         url: http://www.dn.pt/sociedade/interior/os-paises-onde-as-mulheres-podem-faltar-ao-trabalho-por-causa-das-dores-menstruais-5034070.html
       -
-        texto: PL 6784/2016
+        text: PL 6784/2016
         url: http://www.camara.gov.br/proposicoesWeb/fichadetramitacao?idProposicao=2122006
       -
-        texto: Deputado Carlos Bezerra propõe mudar CLT para permitir “licença-menstrual”
+        text: Deputado Carlos Bezerra propõe mudar CLT para permitir “licença-menstrual”
         url: http://www.conjur.com.br/2016-dez-24/deputado-propoe-mudar-clt-permitir-licenca-menstrual
 
   -
-    nome: Lei específica para combater a violência doméstica
-    ano: 2006
+    name: Lei específica para combater a violência doméstica
+    year: 2006
     num: 21
-    descricao:
+    description:
       - 'Lei Maria da Penha: “Os benefícios alcançados pelas mulheres com a Lei Maria da Penha são inúmeros. A Lei criou um mecanismo judicial específico - os Juizados de Violência Doméstica e Familiar contra as Mulheres - com competência cível e criminal; inovou com uma série de medidas protetivas de urgência para as vítimas de violência doméstica; reforçou a atuação das Delegacias de Atendimento à Mulher, da Defensoria Pública, do Ministério Público e de uma rede de serviços de atenção à mulher em situação de violência doméstica e familiar.'
       - 'A Lei previu, ainda, uma série de medidas de caráter social, preventivo, protetivo e repressivo, e definiu as diretrizes das políticas públicas e ações integradas para a prevenção e erradicação da violência doméstica contra as mulheres, tais como: a implementação de redes de serviços interinstitucionais, a promoção de estudos e estatísticas, a avaliação dos resultados; a implementação de centros de atendimento multidisciplinar, delegacias especializadas e casas abrigo; e a realização de campanhas educativas, capacitação permanente dos integrantes dos órgãos envolvidos na questão, celebração de convênios e parcerias, e a inclusão de conteúdos de equidade de gênero nos currículos escolares.'
       - Em suma, a Lei Maria da Penha reconhece a obrigação do Estado em garantir a segurança das mulheres nos espaços público e privado ao definir as linhas de uma política de prevenção e atenção no enfrentamento à violência doméstica e familiar contra a mulher. Delimita, ademais, o atendimento às mulheres vítimas de violência doméstica e familiar e inverte a lógica da hierarquia de poder em nossa sociedade, de modo a privilegiar as mulheres e dotá-las de maior cidadania e conscientização dos reconhecidos recursos para agir e se posicionar, no âmbito familiar e social, garantindo-lhes sua emancipação e autonomia”.
     links:
       -
-        texto: 'Fonte: Site da Secretaria Especial de Política para Mulheres'
+        text: 'Fonte: Site da Secretaria Especial de Política para Mulheres'
         url: http://www.spm.gov.br/assuntos/violencia/lei-maria-da-penha/breve-historico
       -
-        texto: Lei 11.340/2006
+        text: Lei 11.340/2006
         url: www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11340.htm
 
   -
-    nome: Licença Maternidade
-    ano: 1943
+    name: Licença Maternidade
+    year: 1943
     num: 22
-    descricao: A licença maternidade surgiu no Brasil em 1943, com o surgimento da Consolidação das Leis do Trabalho, a CLT. A licença era de 84 dias e tinha que ser paga pelo empregador, o que causava uma restrição considerável para as mulheres no mercado de trabalho. A atual licença obrigatória para empresas é de 120 dias, a voluntária, chamada Programa Empresa Cidadã, a amplia para 160 dias. Em 2016, a licença paternidade foi ampliada de 5 para 20 dias, mas apenas para empresas do Programa Empresa Cidadã.
+    description: A licença maternidade surgiu no Brasil em 1943, com o surgimento da Consolidação das Leis do Trabalho, a CLT. A licença era de 84 dias e tinha que ser paga pelo empregador, o que causava uma restrição considerável para as mulheres no mercado de trabalho. A atual licença obrigatória para empresas é de 120 dias, a voluntária, chamada Programa Empresa Cidadã, a amplia para 160 dias. Em 2016, a licença paternidade foi ampliada de 5 para 20 dias, mas apenas para empresas do Programa Empresa Cidadã.
     links:
       -
-        texto: Especial Licença-Maternidade 2 - Evolução das leis e costumes sobre licença-maternidade no Brasil (06’02’’) Site da Cãmara Federal
+        text: Especial Licença-Maternidade 2 - Evolução das leis e costumes sobre licença-maternidade no Brasil (06’02’’) Site da Cãmara Federal
         url: http://bit.ly/2rvtTdC
       -
-        texto: LEI Nº 11.770, DE 9 DE SETEMBRO DE 2008
+        text: LEI Nº 11.770, DE 9 DE SETEMBRO DE 2008
         url: http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11770.htm
       -
-        texto: Aprovada licença-paternidade de 20 dias
+        text: Aprovada licença-paternidade de 20 dias
         url: https://suriman.jusbrasil.com.br/noticias/314065643/aprovada-licenca-paternidade-de-20-dias
 
   -
-    nome: Pensão Alimentícia
-    ano: 1603
+    name: Pensão Alimentícia
+    year: 1603
     num: 23
-    descricao: A questão dos alimentos foi prevista nas Ordenações do Reino, valendo em Portugal e também no Brasil, foram criadas em 1595, mas entraram efetivamente em vigor em 1603. Tiveram grande influência no Brasil até 1916, quando foi instituído o Código Civil.
+    description: A questão dos alimentos foi prevista nas Ordenações do Reino, valendo em Portugal e também no Brasil, foram criadas em 1595, mas entraram efetivamente em vigor em 1603. Tiveram grande influência no Brasil até 1916, quando foi instituído o Código Civil.
     links:
       -
-        texto: Ordenações Filipinas - considerável influência no direito brasileiro
+        text: Ordenações Filipinas - considerável influência no direito brasileiro
         url: http://www.cartaforense.com.br/conteudo/colunas/ordenacoes-filipinas--consideravel-influencia-no-direito-brasileiro/484
       -
-        texto: 'A Pessoa Idosa e a Tutela Alimentar: Direitos e Obrigações em relação à Família'
+        text: 'A Pessoa Idosa e a Tutela Alimentar: Direitos e Obrigações em relação à Família'
         url: http://www.dominiopublico.gov.br/download/teste/arqs/cp109250.pdf
       -
-        texto: Ordenações Filipinas on-line
+        text: Ordenações Filipinas on-line
         url: http://www1.ci.uc.pt/ihti/proj/filipinas/ordenacoes.htm
 
   -
-    nome: Programa Social que fornece auxílio financeiro concentrado sob a responsabilidade da mulher
-    ano: 2004
+    name: Programa Social que fornece auxílio financeiro concentrado sob a responsabilidade da mulher
+    year: 2004
     num: 24
-    descricao: A Lei n. 10.836, de 9 de janeiro 2004, criou o Programa Bolsa Família, que, de acordo com o § 14 do artigo 2º, define que “O pagamento dos benefícios previstos nesta Lei será feito preferencialmente à mulher, na forma do regulamento.”
+    description: A Lei n. 10.836, de 9 de janeiro 2004, criou o Programa Bolsa Família, que, de acordo com o § 14 do artigo 2º, define que “O pagamento dos benefícios previstos nesta Lei será feito preferencialmente à mulher, na forma do regulamento.”
     links:
       -
-        texto: Bolsa Família deu autonomia às mulheres, mas ainda falha com os homens
+        text: Bolsa Família deu autonomia às mulheres, mas ainda falha com os homens
         url:  http://jornalggn.com.br/blog/bolsa-familia-deu-autonomia-as-mulheres-mas-ainda-falha-com-os-homens
       -
-        texto: LEI No 10.836, DE 9 DE JANEIRO DE 2004.
+        text: LEI No 10.836, DE 9 DE JANEIRO DE 2004.
         url: http://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l10.836.htm
 
   -
-    nome: Garantia à igualdade salarial
-    ano: x
+    name: Garantia à igualdade salarial
+    year: x
     num: 25
-    descricao: A Islândia é o 1º país do mundo a obrigar que as empresas cumpram igualdade salarial entre os gêneros, com lei que entrou em vigor em 1º de janeiro de 2018. No Brasil, pela Constituição Federal, deveríamos ter igualdade salarial, porém não existe nada que regulamente esse direito. Luciana Genro propôs um PL (Projeto de Lei n. 7.016/2010) sobre o tema, que foi esquecido pela Câmara.
+    description: A Islândia é o 1º país do mundo a obrigar que as empresas cumpram igualdade salarial entre os gêneros, com lei que entrou em vigor em 1º de janeiro de 2018. No Brasil, pela Constituição Federal, deveríamos ter igualdade salarial, porém não existe nada que regulamente esse direito. Luciana Genro propôs um PL (Projeto de Lei n. 7.016/2010) sobre o tema, que foi esquecido pela Câmara.
     links:
       -
-        texto: Islândia e a igualdade salarial entre os gêneros
+        text: Islândia e a igualdade salarial entre os gêneros
         url: http://oglobo.globo.com/sociedade/islandia-institui-exigencia-de-salarios-iguais-para-homens-mulheres-21031570
       -
-        texto: Projeto de Lei n. 7.016/2010
+        text: Projeto de Lei n. 7.016/2010
         url: http://www.camara.gov.br/proposicoesWeb/fichadetramitacao?idProposicao=470681
 
   -
-    nome: Proibição do parto com algemas
-    ano: 2016
+    name: Proibição do parto com algemas
+    year: 2016
     num: 26
-    descricao:
+    description:
       - A proibição do parto com algemas está sendo discutida desde 2012, entretanto, somente com o Decreto nº 8.858 de 2016 (“Art. 3º É vedado emprego de algemas em mulheres presas em qualquer unidade do sistema penitenciário nacional durante o trabalho de parto, no trajeto da parturiente entre a unidade prisional e a unidade hospitalar e após o parto, durante o período em que se encontrar hospitalizada.”) a proibição de fato aconteceu.
       - O Projeto de Lei da Câmara nº 23, de 2017 inclui a medida no Código de Processo Penal tornando o decreto uma política de Estado. A sanção presidencial ocorreu em abril de 2017 pelo Presidente Michel Temer, dando origem à Lei nº 13.434 de 12/04/2017, que acrescenta parágrafo único ao art. 292 do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal), para vedar o uso de algemas em mulheres grávidas durante o parto e em mulheres durante a fase de puerpério imediato.
     links:
       -
-        texto: Projeto de Lei do Senado nº 75, de 2012
+        text: Projeto de Lei do Senado nº 75, de 2012
         url: http://www25.senado.leg.br/web/atividade/materias/-/materia/104806
       -
-        texto: Decreto nº 8.858, de 26 de setembro de 2016
+        text: Decreto nº 8.858, de 26 de setembro de 2016
         url: http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2016/Decreto/D8858.htm
       -
-        texto: Projeto de Lei da Câmara nº 23, de 2017
+        text: Projeto de Lei da Câmara nº 23, de 2017
         url: https://www25.senado.leg.br/web/atividade/materias/-/materia/128274
       -
-        texto: Sanção Presidencial, abril de 2017
+        text: Sanção Presidencial, abril de 2017
         url: http://blogs.oglobo.globo.com/lauro-jardim/post/temer-sanciona-lei-que-proibe-gravidas-algemadas-durante-o-parto.html
       -
-        texto: Lei nº 13.434 de 12/04/2017
+        text: Lei nº 13.434 de 12/04/2017
         url: http://legis.senado.leg.br/legislacao/DetalhaSigen.action?id=17676954
 
   -
-    nome: Proibição legislativa do casamento infantil
-    ano: x
+    name: Proibição legislativa do casamento infantil
+    year: x
     num: 27
-    descricao:
+    description:
       - 'No ECA, Estatuto da Criança e do Adolescente, considera-se criança a pessoa de até 12 anos incompletos. O Código Civil de 2002 estabelece: A idade mínima para se casar mediante autorização dos pais ou representantes legais, é dezesseis anos. Porém, no Art. 1.520 é possível casar sem ter atingido a idade mínima, para então, evitar imposição ou cumprimento de pena criminal ou em caso de gravidez. Não havendo limite de idade aparente para se proibir um casamento. Atualmente, o Brasil tem o maior número de casos de casamento infantil da América Latina e o quarto no mundo.'
       - “Em 2005, a Lei 11.160 revogou os incisos VII e VIII do artigo 107 do Código Penal, que previam o casamento do estuprador com sua vítima como causa extintiva da punibilidade”. Porém, a lei civil mantém a possibilidade de autorização excepcional do casamento para o caso de crimes sexuais cometidos contra meninas.
     links:
       -
-        texto: O que a vigência do artigo 1520 do Código Civil diz sobre a percepção do estupro?
+        text: O que a vigência do artigo 1520 do Código Civil diz sobre a percepção do estupro?
         url: https://jus.com.br/artigos/56710/o-que-a-vigencia-do-artigo-1520-do-codigo-civil-diz-sobre-a-percepcao-do-estupro
       -
-        texto: Lei brasileira tem brechas que incentivam o casamento infantil no país, alerta Banco Mundial
+        text: Lei brasileira tem brechas que incentivam o casamento infantil no país, alerta Banco Mundial
         url: http://g1.globo.com/mundo/noticia/lei-brasileira-tem-brechas-que-incentivam-o-casamento-infantil-no-pais-alerta-banco-mundial.ghtml
       -
-        texto: Banco Mundial lança relatório sobre casamento infantil
+        text: Banco Mundial lança relatório sobre casamento infantil
         url: http://www.onumulheres.org.br/noticias/banco-mundial-lanca-relatorio-sobre-casamento-infantil/
       -
-        texto: LEI Nº 10.406, DE 10 DE JANEIRO DE 2002.
+        text: LEI Nº 10.406, DE 10 DE JANEIRO DE 2002.
         url: http://www.planalto.gov.br/ccivil_03/leis/2002/L10406.htm
 
   -
-    nome: Regulamentação da Licença Maternidade para militares
-    ano: 2009
+    name: Regulamentação da Licença Maternidade para militares
+    year: 2009
     num: 28
-    descricao: Em 2009, por meio do Projeto de Lei 5896, foi discutido sobre a licença à gestante e à adotante, as medidas de proteção à maternidade para militares grávidas e a licença-paternidade, no âmbito das Forças Armadas. Este Projeto de Lei tornou-se Lei Ordinária em 2015, sob o número 13.109, em 25 de março.
+    description: Em 2009, por meio do Projeto de Lei 5896, foi discutido sobre a licença à gestante e à adotante, as medidas de proteção à maternidade para militares grávidas e a licença-paternidade, no âmbito das Forças Armadas. Este Projeto de Lei tornou-se Lei Ordinária em 2015, sob o número 13.109, em 25 de março.
     links:
       -
-        texto: Projeto regulamenta licença maternidade e paternidade para militar
+        text: Projeto regulamenta licença maternidade e paternidade para militar
         url: http://www2.camara.leg.br/camaranoticias/noticias/142972.html
       -
-        texto: PL 5896/2009
+        text: PL 5896/2009
         url: http://www.camara.gov.br/proposicoesWeb/fichadetramitacao?idProposicao=447331
       -
-        texto: LEI Nº 13.109, DE 25 DE MARÇO DE 2015.
+        text: LEI Nº 13.109, DE 25 DE MARÇO DE 2015.
         url: http://www.planalto.gov.br/CCIVIL_03/_Ato2015-2018/2015/Lei/L13109.htm
