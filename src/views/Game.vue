@@ -1,14 +1,14 @@
 <template>
 <div class="game-area">
   <div class="viewport">
-    <draggable v-model="cardsInPlay" class="play-area" :options="{group:'people'}">
-      <card-object v-for="element in cardsInPlay" :key="element.name" :cardData="element"></card-object>
+    <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
+      <card-object v-for="element in cardsInPlay" :key="element.num" :cardData="element"/>
     </draggable>
   </div>
 
-  <draggable v-model="discardPile" class="discard-area" :options="{group:'people'}">
+  <draggable v-model="discardPile" class="discard-area" :options="{group:'card'}">
     <p class="discard-text">Descarte</p>
-    <card-object v-for="element in discardPile" :key="element.name" :cardData="element"></card-object>
+    <card-object v-for="element in discardPile" :key="element.num" :cardData="element"/>
   </draggable>
 
   <button class="check-button" @click="checkCards">Verificar cartas</button>
