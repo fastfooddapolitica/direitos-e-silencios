@@ -1,23 +1,21 @@
 <template>
-<div id="main">
-  <div class="drag">
-    <div class="viewport">
-      <draggable v-model="cardsInPlay" class="play-area" :options="{group:'people'}">
-        <card-object v-for="element in cardsInPlay" :key="element.name" :cardData="element"></card-object>
-      </draggable>
-    </div>
+<div class="game-area">
+  <div class="viewport">
+    <draggable v-model="cardsInPlay" class="play-area" :options="{group:'people'}">
+      <card-object v-for="element in cardsInPlay" :key="element.name" :cardData="element"></card-object>
+    </draggable>
   </div>
 
   <draggable v-model="discardPile" class="discard-area" :options="{group:'people'}">
+    <p class="discard-text">Descarte</p>
     <card-object v-for="element in discardPile" :key="element.name" :cardData="element"></card-object>
   </draggable>
 
-  <button @click="checkCards"> Verificar cartas </button>
+  <button class="check-button" @click="checkCards">Verificar cartas</button>
 
   <div v-show="rightSequence == false">Está errado!!</div>
   <div v-show="rightSequence == true">Está certo!!</div>
 </div>
-
 </template>
 
 <script>
@@ -65,26 +63,42 @@ export default {
 </script>
 
 <style lang="scss">
+.game-area {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.play-area {
+    width: 900px;
+    margin: auto;
+}
 
-  .play-area {
-    width: 800px;
-    height: 120px;
-  }
+.viewport {
+    overflow-x: auto;
+    height: 140px;
+}
 
-  .discard-area {
+.discard-area {
     min-width: 100px;
     height: 120px;
     background-color: grey;
-  }
-
-  .viewport {
-    overflow-x: scroll;
-    width: 600px;
-    height: 120px;
-  }
-
-  .sortable-ghost{
+    position: relative;
+}
+.discard-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    margin: 0;
+}
+.check-button {
+    max-width: 300px;
+    margin: 20px auto;
+}
+.sortable-ghost{
     opacity: .2;
     background-color: skyblue;
-  }
+}
 </style>

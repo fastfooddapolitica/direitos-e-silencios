@@ -14,13 +14,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .card {
+.card {
     width: 100px;
     height: 100px;
     background-color: rgb(172, 211, 226);
     margin: 10px;
     display: inline-block;
     overflow: hidden;
-  }
-
+    z-index: 2;
+    cursor: grab;
+    position: relative;
+}
 </style>
