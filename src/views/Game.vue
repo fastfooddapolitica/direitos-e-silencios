@@ -28,7 +28,6 @@ var index = 0
 
 for (var i = 0; i < 7; i++) {
   index = Math.floor(Math.random() * cards.length)
-
   cardsInPlay.push(cards.pop(index))
 }
 
@@ -49,12 +48,22 @@ export default {
     checkCards () {
       var lastYear = 0
       this.rightSequence = true
+      // Check timeline
       for (var card of this.cardsInPlay) {
-        if (card.year < lastYear || card.year === 'X') {
+        if (card.year < lastYear || card.year === 'x') {
           this.rightSequence = false
           break
         } else {
           lastYear = card.year
+        }
+      }
+      if (this.rightSequence) {
+        // Check discard pile
+        for (card of this.discardPile) {
+          if (card.year !== 'x') {
+            this.rightSequence = false
+            break
+          }
         }
       }
     }
