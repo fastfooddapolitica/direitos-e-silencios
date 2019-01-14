@@ -15,14 +15,21 @@ export default {
 
 <style scoped lang="scss">
 .card {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(172, 211, 226);
+    width: 150px;
+    height: 150px;
+    background-image: url('~@/assets/images/direitos_silencios_frente.png');
     margin: 10px;
     display: inline-block;
     overflow: hidden;
     z-index: 2;
     cursor: grab;
     position: relative;
+    background-size: 100%;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    padding-top: 70px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 </style>

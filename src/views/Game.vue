@@ -79,19 +79,19 @@ export default {
     justify-content: center;
 }
 .play-area {
-    width: 900px;
+    width: 1200px;
     margin: auto;
 }
 
 .viewport {
     overflow-x: auto;
-    height: 140px;
+    height: 180px;
 }
 
 .discard-area {
     min-width: 100px;
-    height: 120px;
-    background-color: grey;
+    height: 170px;
+    background-color: #ccc;
     position: relative;
 }
 .discard-text {
