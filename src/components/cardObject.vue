@@ -31,5 +31,6 @@ export default {
     padding-top: 70px;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    box-shadow: 2px 2px 4px 0px #777;
 }
 </style>
