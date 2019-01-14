@@ -8,5 +8,5 @@ module.exports = {
       .end()
       .use('yaml-loader')
       .loader('yaml-loader')
-  },
+  }
 }
