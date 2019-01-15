@@ -76,6 +76,7 @@ $card-size: 150px;
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 2px 2px 4px 0px #777;
+    font-size: 12pt;
 }
 .card-back {
     background-color: #7670b3;
