@@ -30,7 +30,16 @@ ul {
     border-radius: 10px;
     border: none;
     font-size: 14pt;
+    cursor: pointer;
+    outline: none;
+    &:hover, &:focus {
+        background-color: #cc6565;
+    }
 }
+button::-moz-focus-inner {
+    border: 0;
+}
+
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
