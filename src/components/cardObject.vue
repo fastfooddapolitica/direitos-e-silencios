@@ -58,6 +58,7 @@ $card-size: 150px;
     top: 0;
     right: 0;
     margin: 0;
+    width: auto;
 }
 .card {
     width: $card-size;

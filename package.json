@@ -22,6 +22,7 @@
     "json-loader": "^0.5.7",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "screenfull": "^4.0.0",
     "vue-draggable": "^1.0.9",
     "vue-template-compiler": "^2.5.21",
     "vuedraggable": "^2.17.0",

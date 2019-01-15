@@ -32,6 +32,8 @@ ul {
     font-size: 14pt;
     cursor: pointer;
     outline: none;
+    width: 100%;
+    box-sizing: border-box;
     &:hover, &:focus {
         background-color: #cc6565;
     }
