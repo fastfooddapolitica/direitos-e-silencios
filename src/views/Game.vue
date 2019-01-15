@@ -1,5 +1,6 @@
 <template>
 <div class="game-area">
+  <router-link :to="{ name: 'intro'}">Menu</router-link>
   <div class="viewport">
     <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
       <card-object v-for="element in cardsInPlay" :key="element.num" :cardData="element"/>
