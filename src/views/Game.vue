@@ -1,6 +1,6 @@
 <template>
 <div class="game-area">
-  <router-link :to="{ name: 'intro'}">Menu</router-link>
+  <router-link class="btn" :to="{ name: 'intro'}">Menu</router-link>
   <div class="viewport">
     <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
       <card-object v-for="element in cardsInPlay" :key="element.num" :cardData="element"/>
@@ -12,7 +12,7 @@
     <card-object v-for="element in discardPile" :key="element.num" :cardData="element"/>
   </draggable>
 
-  <button class="check-button" @click="checkCards">Verificar cartas</button>
+  <button class="btn check-button" @click="checkCards">Verificar cartas</button>
 
   <div v-show="rightSequence == false">Está errado!!</div>
   <div v-show="rightSequence == true">Está certo!!</div>

@@ -3,7 +3,7 @@
     <h1>Instruções</h1>
     <p>Cartas blah blah</p>
     <ul>
-      <li><router-link :to="{ name: 'intro'}">Voltar</router-link></li>
+      <li><router-link class="btn" :to="{ name: 'intro'}">Voltar</router-link></li>
     </ul>
   </div>
 </template>
