@@ -1,8 +1,14 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import App from '@/App.vue'
+import btnX from '@/components/customButton.vue'
+import router from '@/router'
+import AudioPlugin from '@/audio'
 
 Vue.config.productionTip = false
+
+Vue.component(btnX.name, btnX)
+
+Vue.use(AudioPlugin)
 
 // Allows calling function when clicked outside of an element
 // Usefull for modal and styled select

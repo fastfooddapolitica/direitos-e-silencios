@@ -5,7 +5,7 @@
     <br>
     <a href="https://github.com/fastfooddapolitica/direitos-e-silencios" target="_blank">Repositório</a>
     <ul>
-      <li><router-link class="btn" :to="{ name: 'intro'}">Voltar</router-link></li>
+      <li><btn-x :to="{ name: 'intro'}">Voltar</btn-x></li>
     </ul>
   </div>
 </template>

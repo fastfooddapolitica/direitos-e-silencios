@@ -5,9 +5,10 @@
       <component :is="modalComponent" v-bind="modalProps"/>
     </modal-box>
 
-    <router-link class="btn" :to="{ name: 'intro'}">Menu</router-link>
+    <btn-x :to="{ name: 'intro'}">Menu</btn-x>
     <div class="viewport">
-      <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
+      <draggable v-model="cardsInPlay" class="play-area"
+                 :options="{group:'card'}" @start="dragStart()" @end="dragEnd()">
         <card-object v-for="element in cardsInPlay"
                     @openModal="openModal"
                     ref="cardsInPlayComponents"
@@ -15,7 +16,8 @@
       </draggable>
     </div>
 
-    <draggable v-model="discardPile" class="discard-area" :options="{group:'card'}">
+    <draggable v-model="discardPile" class="discard-area"
+               :options="{group:'card'}" @start="dragStart()" @end="dragEnd()">
       <p class="discard-text">Descarte</p>
       <card-object v-for="element in discardPile"
                   @openModal="openModal"
@@ -23,10 +25,10 @@
                   :key="element.num" :cardData="element"/>
     </draggable>
 
-    <button class="btn" @click="checkCards">Verificar cartas</button>
-    <button class="btn" @click="restartGame">Reiniciar</button>
-    <button class="btn" @click="flipCards">Virar cartas</button>
-    <button class="btn" @click="unflipCards">Desvirar cartas</button>
+    <btn-x @click="checkCards">Verificar cartas</btn-x>
+    <btn-x @click="restartGame">Reiniciar</btn-x>
+    <btn-x @click="flipCards">Virar cartas</btn-x>
+    <btn-x @click="unflipCards">Desvirar cartas</btn-x>
 
     <div v-show="rightSequence == false">Não... Pelo menos {{ minWrongCardsCount }} cartas estão no lugar errado.</div>
     <div v-show="rightSequence == true">Está certo!!</div>
@@ -97,6 +99,12 @@ export default {
           this.minWrongCardsCount += 1
         }
       }
+      // Play sound
+      if (this.rightSequence) {
+        this.$audio.play('correct')
+      } else {
+        this.$audio.play('wrong')
+      }
     },
     flipCards () {
       for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
@@ -107,6 +115,12 @@ export default {
       for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
         if (card) card.unflip()
       }
+    },
+    dragStart () {
+      this.$audio.play('grab')
+    },
+    dragEnd () {
+      this.$audio.play('release')
     }
   }
 }

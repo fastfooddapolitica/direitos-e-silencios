@@ -3,10 +3,10 @@
     <h1>Direitos e Silêncios</h1>
     <p>Um jogo blah blah blah</p>
     <ul>
-      <li><router-link class="btn" :to="{ name: 'game'}">Jogar</router-link></li>
-      <li><router-link class="btn" :to="{ name: 'tutorial'}">Instruções</router-link></li>
-      <li><router-link class="btn" :to="{ name: 'about'}">Sobre</router-link></li>
-      <li><button class="btn" @click="toggleFullscreen">Tela Cheia</button></li>
+      <li><btn-x :to="{ name: 'game'}">Jogar</btn-x></li>
+      <li><btn-x :to="{ name: 'tutorial'}">Instruções</btn-x></li>
+      <li><btn-x :to="{ name: 'about'}">Sobre</btn-x></li>
+      <li><btn-x @click="toggleFullscreen">Tela Cheia</btn-x></li>
     </ul>
   </div>
 </template>

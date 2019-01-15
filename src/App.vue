@@ -19,28 +19,6 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-.btn {
-    text-decoration: none;
-    max-width: 200px;
-    background-color: #c52525;
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    font-size: 14pt;
-    cursor: pointer;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    &:hover, &:focus {
-        background-color: #cc6565;
-    }
-}
-button::-moz-focus-inner {
-    border: 0;
-}
 
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
