@@ -86,13 +86,11 @@ export default {
           lastYear = card.year
         }
       }
-      if (this.rightSequence) {
-        // Check discard pile
-        for (card of this.discardPile) {
-          if (card.year !== 'x') {
-            this.rightSequence = false
-            this.minWrongCardsCount += 1
-          }
+      // Check discard pile
+      for (card of this.discardPile) {
+        if (card.year !== 'x') {
+          this.rightSequence = false
+          this.minWrongCardsCount += 1
         }
       }
     }
