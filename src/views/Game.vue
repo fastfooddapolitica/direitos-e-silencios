@@ -1,28 +1,38 @@
 <template>
-<div class="game-area">
-  <router-link class="btn" :to="{ name: 'intro'}">Menu</router-link>
-  <div class="viewport">
-    <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
-      <card-object v-for="element in cardsInPlay" :key="element.num" :cardData="element"/>
+  <div class="game-area">
+
+    <modal-box modal-id="game" ref="modal">
+      <component :is="modalComponent" v-bind="modalProps"/>
+    </modal-box>
+
+    <router-link class="btn" :to="{ name: 'intro'}">Menu</router-link>
+    <div class="viewport">
+      <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
+        <card-object v-for="element in cardsInPlay"
+                    @openModal="openModal"
+                    :key="element.num" :cardData="element"/>
+      </draggable>
+    </div>
+
+    <draggable v-model="discardPile" class="discard-area" :options="{group:'card'}">
+      <p class="discard-text">Descarte</p>
+      <card-object v-for="element in discardPile"
+                  @openModal="openModal"
+                  :key="element.num" :cardData="element"/>
     </draggable>
+
+    <button class="btn check-button" @click="checkCards">Verificar cartas</button>
+
+    <div v-show="rightSequence == false">Está errado!!</div>
+    <div v-show="rightSequence == true">Está certo!!</div>
   </div>
-
-  <draggable v-model="discardPile" class="discard-area" :options="{group:'card'}">
-    <p class="discard-text">Descarte</p>
-    <card-object v-for="element in discardPile" :key="element.num" :cardData="element"/>
-  </draggable>
-
-  <button class="btn check-button" @click="checkCards">Verificar cartas</button>
-
-  <div v-show="rightSequence == false">Está errado!!</div>
-  <div v-show="rightSequence == true">Está certo!!</div>
-</div>
 </template>
 
 <script>
 import draggable from 'vuedraggable'
 import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
+import modalBox from '@/components/modalBox.vue'
 
 var cardsInPlay = []
 var index = 0
@@ -38,14 +48,22 @@ export default {
     return {
       cardsInPlay,
       discardPile: [],
-      rightSequence: undefined
+      rightSequence: undefined,
+      modalComponent: null,
+      modalProps: null
     }
   },
   components: {
     draggable,
-    cardObject
+    cardObject,
+    modalBox
   },
   methods: {
+    openModal (data) {
+      this.modalComponent = data.component
+      this.modalProps = data.props
+      this.$refs.modal.open()
+    },
     checkCards () {
       var lastYear = 0
       this.rightSequence = true

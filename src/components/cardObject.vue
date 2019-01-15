@@ -1,14 +1,28 @@
 <template>
   <div class="card">
+    <button class="btn show-details" @click="showDetails">?</button>
     {{cardData.year}} - {{cardData.name}}
   </div>
 </template>
 
 <script>
+import cardDetails from '@/components/cardDetails.vue'
+
 export default {
   name: 'cardObject',
   props: {
     cardData: Object
+  },
+  methods: {
+    showDetails () {
+      this.$emit(
+        'openModal',
+        {
+          component: cardDetails,
+          props: { cardData: this.cardData }
+        }
+      )
+    }
   }
 }
 </script>
@@ -32,5 +46,11 @@ export default {
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 2px 2px 4px 0px #777;
+}
+.show-details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
 }
 </style>
