@@ -81,6 +81,8 @@ $card-size: 150px;
     background-image: url('~@/assets/images/verso.png');
 }
 
+/* Based on: https://davidwalsh.name/css-flip */
+/* Look there for IE support */
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;
