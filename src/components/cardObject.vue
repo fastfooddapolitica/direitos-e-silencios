@@ -31,6 +31,7 @@ export default {
 .card {
     width: 150px;
     height: 150px;
+    background-color: #b61f38;
     background-image: url('~@/assets/images/frente.png');
     margin: 10px;
     display: inline-block;

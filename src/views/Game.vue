@@ -21,9 +21,10 @@
                   :key="element.num" :cardData="element"/>
     </draggable>
 
-    <button class="btn check-button" @click="checkCards">Verificar cartas</button>
+    <button class="btn" @click="checkCards">Verificar cartas</button>
+    <button class="btn" @click="restartGame">Reiniciar</button>
 
-    <div v-show="rightSequence == false">Está errado!!</div>
+    <div v-show="rightSequence == false">Não... Pelo menos {{ minWrongCardsCount }} cartas estão no lugar errado.</div>
     <div v-show="rightSequence == true">Está certo!!</div>
   </div>
 </template>
@@ -34,23 +35,17 @@ import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
 import modalBox from '@/components/modalBox.vue'
 
-var cardsInPlay = []
-var index = 0
-
-for (var i = 0; i < 7; i++) {
-  index = Math.floor(Math.random() * cards.length)
-  cardsInPlay.push(cards.pop(index))
-}
-
 export default {
   name: 'home',
   data () {
     return {
-      cardsInPlay,
+      cardsInPlay: [],
       discardPile: [],
       rightSequence: undefined,
       modalComponent: null,
-      modalProps: null
+      modalProps: null,
+      minWrongCardsCount: 0,
+      triesCount: 0
     }
   },
   components: {
@@ -58,7 +53,21 @@ export default {
     cardObject,
     modalBox
   },
+  mounted () {
+    this.restartGame()
+  },
   methods: {
+    restartGame () {
+      this.discardPile = []
+      this.cardsInPlay = []
+      this.rightSequence = undefined
+      var index = 0
+      var cardsTmp = cards.slice()
+      for (var i = 0; i < 7; i++) {
+        index = Math.floor(Math.random() * cardsTmp.length)
+        this.cardsInPlay.push(cardsTmp.splice(index, 1)[0])
+      }
+    },
     openModal (data) {
       this.modalComponent = data.component
       this.modalProps = data.props
@@ -67,11 +76,12 @@ export default {
     checkCards () {
       var lastYear = 0
       this.rightSequence = true
+      this.minWrongCardsCount = 0
       // Check timeline
       for (var card of this.cardsInPlay) {
         if (card.year < lastYear || card.year === 'x') {
           this.rightSequence = false
-          break
+          this.minWrongCardsCount += 1
         } else {
           lastYear = card.year
         }
@@ -81,7 +91,7 @@ export default {
         for (card of this.discardPile) {
           if (card.year !== 'x') {
             this.rightSequence = false
-            break
+            this.minWrongCardsCount += 1
           }
         }
       }
@@ -120,10 +130,6 @@ export default {
     transform: translateX(-50%) translateY(-50%);
     z-index: 1;
     margin: 0;
-}
-.check-button {
-    max-width: 300px;
-    margin: 20px auto;
 }
 .sortable-ghost{
     opacity: .2;
