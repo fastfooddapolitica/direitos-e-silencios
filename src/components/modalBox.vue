@@ -14,13 +14,12 @@
           class="modal-dialog"
           role="document">
           <div class="modal-content">
-            <button
-              type="button"
-              class="btn close-btn"
+            <btn-x
+              class="close-btn"
               @click="close"
               aria-label="Close">
               <span aria-hidden="true">&times;</span>
-            </button>
+            </btn-x>
             <slot/>
           </div>
         </div>
@@ -52,11 +51,12 @@ export default {
 </script>
 
 <style lang="scss">
-.close-btn {
+.btn.close-btn {
+    width: auto;
     margin: 0 0 0 auto;
     font-weight: bold;
     padding: 4px 10px 6px 10px;
-    z-index: 3000
+    z-index: 3000;
 }
 
 .modal {
