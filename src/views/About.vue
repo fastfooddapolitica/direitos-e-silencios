@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     <h1>Sobre</h1>
     <a href="http://fastfooddapolitica.com.br">Fast Food da Política</a>
     <br>

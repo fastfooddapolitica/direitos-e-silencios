@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Game from './views/Game.vue'
 import Intro from './views/Intro.vue'
 import About from './views/About.vue'
+import Tutorial from './views/Tutorial.vue'
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'intro',
       component: Intro
+    },
+    {
+      path: '/tutorial',
+      name: 'tutorial',
+      component: Tutorial
     },
     {
       path: '/game',
