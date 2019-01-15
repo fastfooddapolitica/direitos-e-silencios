@@ -1,7 +1,4 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/direitos-e-silencios/'
-    : '/',
   chainWebpack: config => {
     config.module
       .rule('yaml')
