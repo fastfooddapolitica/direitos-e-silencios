@@ -1,7 +1,18 @@
 <template>
-  <div class="card">
-    <button class="btn show-details" @click="showDetails">?</button>
-    {{cardData.year}} - {{cardData.name}}
+  <div class="flip-container" :class="{flip: flipped}">
+    <div class="flipper">
+      <div class="front">
+        <div class="card">
+          {{cardData.name}}
+        </div>
+      </div>
+      <div class="back">
+        <div class="card card-back">
+          <button class="btn show-details" @click="showDetails">?</button>
+          {{cardData.year}}<br>{{cardData.name}}
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,7 +24,18 @@ export default {
   props: {
     cardData: Object
   },
+  data () {
+    return {
+      flipped: false
+    }
+  },
   methods: {
+    flip () {
+      this.flipped = true
+    },
+    unflip () {
+      this.flipped = false
+    },
     showDetails () {
       this.$emit(
         'openModal',
@@ -28,15 +50,21 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+$card-size: 150px;
+
+.show-details {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+}
 .card {
-    width: 150px;
-    height: 150px;
+    width: $card-size;
+    height: $card-size;
     background-color: #b61f38;
     background-image: url('~@/assets/images/frente.png');
-    margin: 10px;
-    display: inline-block;
     overflow: hidden;
-    z-index: 2;
     cursor: grab;
     position: relative;
     background-size: 100%;
@@ -48,10 +76,55 @@ export default {
     box-sizing: border-box;
     box-shadow: 2px 2px 4px 0px #777;
 }
-.show-details {
+.card-back {
+    background-color: #7670b3;
+    background-image: url('~@/assets/images/verso.png');
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+    perspective: 1000px;
+    display: inline-block;
+}
+/* flip the pane when hovered */
+/* .flip-container:hover .flipper, .flip-container.hover .flipper,  */
+.flip-container.flip .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container {
+    margin: 10px;
+}
+.flip-container, .front, .back {
+    width: $card-size;
+    height: $card-size;
+    z-index: 2;
+}
+
+/* flip speed goes here */
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
-    right: 0;
-    margin: 0;
+    left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }
 </style>

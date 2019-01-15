@@ -10,6 +10,7 @@
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}">
         <card-object v-for="element in cardsInPlay"
                     @openModal="openModal"
+                    ref="cardsInPlayComponents"
                     :key="element.num" :cardData="element"/>
       </draggable>
     </div>
@@ -18,11 +19,14 @@
       <p class="discard-text">Descarte</p>
       <card-object v-for="element in discardPile"
                   @openModal="openModal"
+                  ref="discardPileComponents"
                   :key="element.num" :cardData="element"/>
     </draggable>
 
     <button class="btn" @click="checkCards">Verificar cartas</button>
     <button class="btn" @click="restartGame">Reiniciar</button>
+    <button class="btn" @click="flipCards">Virar cartas</button>
+    <button class="btn" @click="unflipCards">Desvirar cartas</button>
 
     <div v-show="rightSequence == false">Não... Pelo menos {{ minWrongCardsCount }} cartas estão no lugar errado.</div>
     <div v-show="rightSequence == true">Está certo!!</div>
@@ -93,6 +97,16 @@ export default {
           this.minWrongCardsCount += 1
         }
       }
+    },
+    flipCards () {
+      for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
+        if (card) card.flip()
+      }
+    },
+    unflipCards () {
+      for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
+        if (card) card.unflip()
+      }
     }
   }
 }
@@ -112,7 +126,8 @@ export default {
 
 .viewport {
     overflow-x: auto;
-    height: 180px;
+    height: 200px;
+    padding-top: 10px;
 }
 
 .discard-area {
