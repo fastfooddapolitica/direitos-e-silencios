@@ -17,7 +17,7 @@ export default {
 .card {
     width: 150px;
     height: 150px;
-    background-image: url('~@/assets/images/direitos_silencios_frente.png');
+    background-image: url('~@/assets/images/frente.png');
     margin: 10px;
     display: inline-block;
     overflow: hidden;
