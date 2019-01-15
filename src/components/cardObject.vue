@@ -64,7 +64,7 @@ $card-size: 150px;
     width: $card-size;
     height: $card-size;
     background-color: #b61f38;
-    background-image: url('~@/assets/images/frente.png');
+    background-image: url('~@/assets/images/card-front.png');
     overflow: hidden;
     cursor: grab;
     position: relative;
@@ -79,7 +79,7 @@ $card-size: 150px;
 }
 .card-back {
     background-color: #7670b3;
-    background-image: url('~@/assets/images/verso.png');
+    background-image: url('~@/assets/images/card-back.png');
 }
 
 /* Based on: https://davidwalsh.name/css-flip */
