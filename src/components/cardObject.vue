@@ -72,11 +72,15 @@ $card-size: 150px;
     border-radius: 10px;
     color: white;
     padding: 10px;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     background-repeat: no-repeat;
     box-sizing: border-box;
     box-shadow: 2px 2px 4px 0px #777;
     font-size: 12pt;
+    text-shadow: black 1px 1px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card-back {
     background-color: #7670b3;
