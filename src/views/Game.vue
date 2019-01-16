@@ -7,22 +7,18 @@
 
     <btn-x :to="{ name: 'intro'}">Menu</btn-x>
     <div class="viewport">
-      <draggable v-model="cardsInPlay" class="play-area"
-                 :options="{group:'card'}" @start="dragStart()" @end="dragEnd()">
-        <card-object v-for="element in cardsInPlay"
-                    @openModal="openModal"
-                    ref="cardsInPlayComponents"
-                    :key="element.num" :cardData="element"/>
+      <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
+                 @start="dragStart()" @end="dragEnd()">
+        <card-object v-for="card in cardsInPlay" @openModal="openModal"
+                     ref="cardsInPlayComponents" :key="card.num" :cardData="card"/>
       </draggable>
     </div>
 
-    <draggable v-model="discardPile" class="discard-area"
-               :options="{group:'card'}" @start="dragStart()" @end="dragEnd()">
-      <p class="discard-text">Descarte</p>
-      <card-object v-for="element in discardPile"
-                  @openModal="openModal"
-                  ref="discardPileComponents"
-                  :key="element.num" :cardData="element"/>
+    <draggable v-model="discardPile" class="discard-area" :options="{group:'card', draggable: '.flip-container'}"
+               @start="dragStart()" @end="dragEnd()">
+      <p slot="header" class="discard-text">Descarte</p>
+      <card-object v-for="card in discardPile" @openModal="openModal"
+                   ref="discardPileComponents" :key="card.num" :cardData="card"/>
     </draggable>
 
     <btn-x @click="checkCards">Verificar cartas</btn-x>
@@ -107,12 +103,14 @@ export default {
       }
     },
     flipCards () {
-      for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
+      var allCards = this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+      for (var card of allCards) {
         if (card) card.flip()
       }
     },
     unflipCards () {
-      for (var card of this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)) {
+      var allCards = this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+      for (var card of allCards) {
         if (card) card.unflip()
       }
     },
@@ -145,7 +143,7 @@ export default {
 }
 
 .discard-area {
-    min-width: 100px;
+    min-width: 600px;
     height: 170px;
     background-color: #ccc;
     position: relative;
