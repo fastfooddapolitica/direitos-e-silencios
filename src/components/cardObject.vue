@@ -3,13 +3,14 @@
     <div class="flipper">
       <div class="front">
         <div class="card">
-          {{cardData.name}}
+          <span>{{cardData.name}}</span>
         </div>
       </div>
       <div class="back">
         <div class="card card-back">
           <button class="btn show-details" @click="showDetails">?</button>
-          {{cardData.year}}<br>{{cardData.name}}
+          <span>{{cardData.name}}</span>
+          <span class="card-year">{{cardData.year}}</span>
         </div>
       </div>
     </div>
@@ -79,12 +80,20 @@ $card-size: 150px;
     font-size: 12pt;
     text-shadow: black 1px 1px 1px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.card-year {
+    background-color: #b61f38;
+    padding: 4px 8px 0px 8px;
+    border: solid 1px black;
+    font-size: 12pt;
 }
 .card-back {
     background-color: #7670b3;
     background-image: url('~@/assets/images/card-back.png');
+    font-size: 11pt;
 }
 
 /* Based on: https://davidwalsh.name/css-flip */
