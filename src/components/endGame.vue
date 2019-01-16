@@ -2,6 +2,9 @@
   <div>
     <h2>{{ title }}</h2>
     <p>{{ msg }}</p>
+    <btn-x @click="$emit('tryAgain')" v-if="!won">Tentar de novo</btn-x>
+    <btn-x @click="$emit('flipCards')">Revelar cartas</btn-x>
+    <btn-x @click="$emit('restartGame')">Novo jogo</btn-x>
   </div>
 </template>
 
@@ -13,11 +16,14 @@ export default {
     triesCount: Number
   },
   computed: {
+    won () {
+      return !this.minWrongCardsCount
+    },
     title () {
-      return this.minWrongCardsCount ? 'Ops..' : 'Parabéns!'
+      return this.won ? 'Parabéns!' : 'Ops..'
     },
     msg () {
-      if (!this.minWrongCardsCount) {
+      if (this.won) {
         return 'Todas as cartas estão certas!'
       } else {
         if (this.minWrongCardsCount === 1) {

@@ -2,7 +2,9 @@
   <div class="game-area">
 
     <modal-box modal-id="game" ref="modal">
-      <component :is="modalComponent" v-bind="modalProps"/>
+      <component :is="modalComponent" v-bind="modalProps"
+                 @tryAgain="closeModal" @flipCards="flipCards"
+                 @restartGame="restartGame"/>
     </modal-box>
 
     <btn-x :to="{ name: 'intro'}">Menu</btn-x>
@@ -26,10 +28,7 @@
     </draggable>
 
     <btn-x @click="checkCards">Verificar cartas</btn-x>
-    <btn-x @click="restartGame">Reiniciar</btn-x>
-    <btn-x @click="flipCards">Virar cartas</btn-x>
-    <btn-x @click="unflipCards">Desvirar cartas</btn-x>
-    <btn-x @click="cardsOutOfBoard = !cardsOutOfBoard">mover</btn-x>
+    <!-- <btn-x @click="unflipCards">Desvirar cartas</btn-x> -->
   </div>
 </template>
 
@@ -68,6 +67,7 @@ export default {
   },
   methods: {
     async restartGame () {
+      this.closeModal()
       if (!this.cardsOutOfBoard) {
         this.cardsOutOfBoard = true
         await sleep(2000)
@@ -137,6 +137,7 @@ export default {
       }
     },
     flipCards () {
+      this.closeModal()
       for (var card of this.allCardsComponents()) {
         if (card) card.flip()
       }
@@ -151,6 +152,9 @@ export default {
     },
     dragEnd () {
       this.$audio.play('release')
+    },
+    closeModal () {
+      this.$refs.modal.close()
     }
   }
 }
@@ -203,6 +207,6 @@ export default {
     transition: all 2s cubic-bezier(.65,.05,.36,1);
 }
 .out-of-board {
-    left: -110%;
+    left: -110vw;
 }
 </style>
