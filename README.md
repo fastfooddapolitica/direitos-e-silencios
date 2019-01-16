@@ -38,5 +38,5 @@ To edit de audio files:
 
 - Open the `.aup` file in the folder `audio_project` using [Audacity](https://www.audacityteam.org). 
 - Place one sound per track.
-- Export the tracks to the `audio_project/export` folder.
+- Export the tracks to the `audio_project/export` folder (File > Export > Export Multiple).
 - Run `compile_audio_sprite.sh` to generate the audio sprite (npm packages must be installed).
