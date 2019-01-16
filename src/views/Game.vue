@@ -103,19 +103,23 @@ export default {
       this.openModal(
         {
           component: endGame,
-          props: { minWrongCardsCount: this.minWrongCardsCount, triesCount: this.triesCount }
+          props: {
+            minWrongCardsCount: this.minWrongCardsCount,
+            triesCount: this.triesCount
+          }
         }
       )
     },
+    allCardsComponents () {
+      return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+    },
     flipCards () {
-      var allCards = this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
-      for (var card of allCards) {
+      for (var card of this.allCardsComponents()) {
         if (card) card.flip()
       }
     },
     unflipCards () {
-      var allCards = this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
-      for (var card of allCards) {
+      for (var card of this.allCardsComponents()) {
         if (card) card.unflip()
       }
     },
