@@ -1,4 +1,4 @@
-import { Howl } from 'howler'
+import { Howl, Howler } from 'howler'
 
 export default {
   install (Vue, options) {
@@ -7,5 +7,6 @@ export default {
     // Replace path to sound file with webpack dynamically generated one
     obj.src = [filepath]
     Vue.prototype.$audio = new Howl(obj)
+    Vue.prototype.$audioConf = Howler
   }
 }

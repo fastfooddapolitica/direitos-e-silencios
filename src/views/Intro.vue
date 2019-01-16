@@ -7,6 +7,7 @@
       <li><btn-x :to="{ name: 'tutorial'}">Instruções</btn-x></li>
       <li><btn-x :to="{ name: 'about'}">Sobre</btn-x></li>
       <li><btn-x @click="toggleFullscreen">Tela Cheia</btn-x></li>
+      <li><btn-x @click="toggleAudio">Emudecer Sons</btn-x></li>
     </ul>
   </div>
 </template>
@@ -21,6 +22,13 @@ export default {
         screenfull.toggle()
       } else {
         alert('A funcionalidade de tela cheia parece não suportada por esse navegador. Por favor, tente em outro.')
+      }
+    },
+    toggleAudio () {
+      if (this.$audioConf._muted) {
+        this.$audioConf.mute(false)
+      } else {
+        this.$audioConf.mute(true)
       }
     }
   }
