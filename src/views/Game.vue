@@ -25,9 +25,6 @@
     <btn-x @click="restartGame">Reiniciar</btn-x>
     <btn-x @click="flipCards">Virar cartas</btn-x>
     <btn-x @click="unflipCards">Desvirar cartas</btn-x>
-
-    <div v-show="rightSequence == false">Não... Pelo menos {{ minWrongCardsCount }} cartas estão no lugar errado.</div>
-    <div v-show="rightSequence == true">Está certo!!</div>
   </div>
 </template>
 
@@ -36,6 +33,7 @@ import draggable from 'vuedraggable'
 import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
 import modalBox from '@/components/modalBox.vue'
+import endGame from '@/components/endGame.vue'
 
 export default {
   name: 'home',
@@ -79,6 +77,7 @@ export default {
       var lastYear = 0
       this.rightSequence = true
       this.minWrongCardsCount = 0
+      this.triesCount += 1
       // Check timeline
       for (var card of this.cardsInPlay) {
         if (card.year < lastYear || card.year === 'x') {
@@ -101,6 +100,12 @@ export default {
       } else {
         this.$audio.play('wrong')
       }
+      this.openModal(
+        {
+          component: endGame,
+          props: { minWrongCardsCount: this.minWrongCardsCount, triesCount: this.triesCount }
+        }
+      )
     },
     flipCards () {
       var allCards = this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
