@@ -149,6 +149,9 @@ export default {
     background-color: #ccc;
     position: relative;
     background-image: url('~@/assets/images/noise.png');
+    box-shadow: inset 0px 0px 20px black;
+    border-top: solid 2px #505050;
+    border-bottom: solid 2px #505050;
 }
 .discard-text {
     position: absolute;
