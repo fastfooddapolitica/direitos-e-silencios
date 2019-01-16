@@ -133,6 +133,7 @@ export default {
 }
 .play-area {
     width: 1200px;
+    height: 180px;
     margin: auto;
 }
 
