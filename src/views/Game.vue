@@ -128,7 +128,7 @@ export default {
 
 <style lang="scss">
 .game-area {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,12 +8,12 @@
 
 <style lang="scss">
 html {
-    height: 100%;
+    min-height: 100%;
     background-color: #b9b6d1;
 }
 body {
     margin: 0;
-    height: 100%;
+    min-height: 100%;
 }
 ul {
     list-style-type: none;
@@ -26,7 +26,7 @@ ul {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    height: 100%;
+    min-height: 100%;
 }
 
 </style>

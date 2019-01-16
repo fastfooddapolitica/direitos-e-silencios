@@ -21,3 +21,4 @@ yarn-error.log*
 *.sw*
 
 audio_project/export/
+ignored_folder
