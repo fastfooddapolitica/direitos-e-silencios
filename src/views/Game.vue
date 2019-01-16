@@ -10,6 +10,8 @@
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
                  @start="dragStart()" @end="dragEnd()">
         <card-object v-for="card in cardsInPlay" @openModal="openModal"
+                     class="card-object"
+                     :class="{'out-of-board': cardsOutOfBoard}"
                      ref="cardsInPlayComponents" :key="card.num" :cardData="card"/>
       </draggable>
     </div>
@@ -18,6 +20,8 @@
                @start="dragStart()" @end="dragEnd()">
       <p slot="header" class="discard-text">Descarte</p>
       <card-object v-for="card in discardPile" @openModal="openModal"
+                   class="card-object"
+                   :class="{'out-of-board': cardsOutOfBoard}"
                    ref="discardPileComponents" :key="card.num" :cardData="card"/>
     </draggable>
 
@@ -25,6 +29,7 @@
     <btn-x @click="restartGame">Reiniciar</btn-x>
     <btn-x @click="flipCards">Virar cartas</btn-x>
     <btn-x @click="unflipCards">Desvirar cartas</btn-x>
+    <btn-x @click="cardsOutOfBoard = !cardsOutOfBoard">mover</btn-x>
   </div>
 </template>
 
@@ -34,6 +39,10 @@ import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
 import modalBox from '@/components/modalBox.vue'
 import endGame from '@/components/endGame.vue'
+
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time))
+}
 
 export default {
   name: 'home',
@@ -45,7 +54,8 @@ export default {
       modalComponent: null,
       modalProps: null,
       minWrongCardsCount: 0,
-      triesCount: 0
+      triesCount: 0,
+      cardsOutOfBoard: true
     }
   },
   components: {
@@ -57,16 +67,25 @@ export default {
     this.restartGame()
   },
   methods: {
-    restartGame () {
+    async restartGame () {
+      if (!this.cardsOutOfBoard) {
+        this.cardsOutOfBoard = true
+        await sleep(2000)
+      }
+      this.unflipCards()
       this.discardPile = []
       this.cardsInPlay = []
       this.rightSequence = undefined
+      this.triesCount = 0
       var index = 0
       var cardsTmp = cards.slice()
       for (var i = 0; i < 7; i++) {
         index = Math.floor(Math.random() * cardsTmp.length)
         this.cardsInPlay.push(cardsTmp.splice(index, 1)[0])
       }
+      await sleep(500)
+      this.cardsOutOfBoard = false
+      this.$audio.play('distribute')
     },
     openModal (data) {
       this.modalComponent = data.component
@@ -111,7 +130,11 @@ export default {
       )
     },
     allCardsComponents () {
-      return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+      if (this.$refs.cardsInPlayComponents) {
+        return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+      } else {
+        return []
+      }
     },
     flipCards () {
       for (var card of this.allCardsComponents()) {
@@ -170,8 +193,16 @@ export default {
     z-index: 1;
     margin: 0;
 }
-.sortable-ghost{
+.sortable-ghost {
     opacity: .2;
     background-color: skyblue;
+}
+.card-object {
+    position: relative;
+    left: 0;
+    transition: all 2s cubic-bezier(.65,.05,.36,1);
+}
+.out-of-board {
+    left: -110%;
 }
 </style>
