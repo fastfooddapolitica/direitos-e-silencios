@@ -148,6 +148,7 @@ export default {
     height: 170px;
     background-color: #ccc;
     position: relative;
+    background-image: url('~@/assets/images/noise.png');
 }
 .discard-text {
     position: absolute;

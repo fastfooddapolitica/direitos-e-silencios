@@ -10,6 +10,7 @@
 html {
     min-height: 100%;
     background-color: #b9b6d1;
+    background-image: url('~@/assets/images/noise.png');
 }
 body {
     margin: 0;

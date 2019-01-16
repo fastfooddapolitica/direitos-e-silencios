@@ -27,6 +27,8 @@ export default {
     text-decoration: none;
     max-width: 200px;
     background-color: #c52525;
+    background-image: url('~@/assets/images/noise.png');
+    background-blend-mode: overlay;
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -38,8 +40,11 @@ export default {
     outline: none;
     width: 100%;
     box-sizing: border-box;
+    box-shadow: black 1px 1px 2px;
+    transition: all .5s;
     &:hover, &:focus {
         background-color: #cc6565;
+        box-shadow: black 1px 1px 4px;
     }
 }
 button::-moz-focus-inner {
