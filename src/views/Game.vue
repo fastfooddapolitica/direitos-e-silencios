@@ -221,7 +221,7 @@ export default {
 .card-object {
     position: relative;
     left: 0;
-    transition: all 2s cubic-bezier(.65,.05,.36,1);
+    transition: left 2s cubic-bezier(.65,.05,.36,1);
     flex-shrink: 0;
 }
 .out-of-board {

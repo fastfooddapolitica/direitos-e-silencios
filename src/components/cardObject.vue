@@ -95,6 +95,10 @@ $card-size: 150px;
     background-image: url('~@/assets/images/card-back.png');
     font-size: 11pt;
 }
+span {
+    pointer-events: none;
+    user-select: none;
+}
 
 /* Based on: https://davidwalsh.name/css-flip */
 /* Look there for IE support */
@@ -142,6 +146,6 @@ $card-size: 150px;
 
 /* back, initially hidden pane */
 .back {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 </style>
