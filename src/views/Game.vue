@@ -7,9 +7,11 @@
                  @restartGame="restartGame"/>
     </modal-box>
 
-    <btn-x :to="{ name: 'intro'}">Menu</btn-x>
+    <btn-x :to="{name: 'intro'}">Menu</btn-x>
+
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
+                 :style="{'min-width': playMinWidth}"
                  @start="dragStart()" @end="dragEnd()">
         <card-object v-for="card in cardsInPlay" @openModal="openModal"
                      class="card-object"
@@ -18,17 +20,20 @@
       </draggable>
     </div>
 
-    <draggable v-model="discardPile" class="discard-area" :options="{group:'card', draggable: '.flip-container'}"
-               @start="dragStart()" @end="dragEnd()">
-      <p slot="header" class="discard-text">Descarte</p>
-      <card-object v-for="card in discardPile" @openModal="openModal"
-                   class="card-object"
-                   :class="{'out-of-board': cardsOutOfBoard}"
-                   ref="discardPileComponents" :key="card.num" :cardData="card"/>
-    </draggable>
+    <div class="viewport viewport-discard">
+      <draggable v-model="discardPile" class="play-area"
+                :options="{group:'card', draggable: '.flip-container'}"
+                :style="{'min-width': discardMinWidth}"
+                @start="dragStart()" @end="dragEnd()">
+        <p slot="header" class="discard-text">Descarte</p>
+        <card-object v-for="card in discardPile" @openModal="openModal"
+                    class="card-object"
+                    :class="{'out-of-board': cardsOutOfBoard}"
+                    ref="discardPileComponents" :key="card.num" :cardData="card"/>
+      </draggable>
+    </div>
 
     <btn-x @click="checkCards">Verificar cartas</btn-x>
-    <!-- <btn-x @click="unflipCards">Desvirar cartas</btn-x> -->
   </div>
 </template>
 
@@ -64,6 +69,14 @@ export default {
   },
   mounted () {
     this.restartGame()
+  },
+  computed: {
+    discardMinWidth () {
+      return this.discardPile.length * 170 + 'px'
+    },
+    playMinWidth () {
+      return this.cardsInPlay.length * 170 + 'px'
+    }
   },
   methods: {
     async restartGame () {
@@ -167,27 +180,27 @@ export default {
     flex-direction: column;
     justify-content: center;
 }
-.play-area {
-    width: 1200px;
-    height: 180px;
-    margin: auto;
-}
-
 .viewport {
     overflow-x: auto;
     height: 200px;
-    padding-top: 10px;
 }
-
-.discard-area {
-    min-width: 600px;
-    height: 170px;
-    background-color: #ccc;
-    position: relative;
-    background-image: url('~@/assets/images/noise.png');
+.viewport-discard {
     box-shadow: inset 0px 0px 20px black;
     border-top: solid 2px #505050;
     border-bottom: solid 2px #505050;
+    background-color: #ccc;
+    background-image: url('~@/assets/images/noise.png');
+    box-sizing: border-box;
+}
+.play-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }
 .discard-text {
     position: absolute;
@@ -205,8 +218,9 @@ export default {
     position: relative;
     left: 0;
     transition: all 2s cubic-bezier(.65,.05,.36,1);
+    flex-shrink: 0;
 }
 .out-of-board {
-    left: -110vw;
+    left: -2000px
 }
 </style>
