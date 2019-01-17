@@ -29,11 +29,11 @@
                 :options="{group:'card', draggable: '.flip-container'}"
                 :style="{'min-width': discardMinWidth}"
                 @start="dragStart()" @end="dragEnd()">
-        <p slot="header" class="discard-text">Descarte</p>
         <card-object v-for="card in discardPile" @openModal="openModal"
                     class="card-object"
                     :class="{'out-of-board': cardsOutOfBoard}"
                     ref="discardPileComponents" :key="card.num" :cardData="card"/>
+        <p slot="footer" class="discard-text">Descarte</p>
       </draggable>
     </div>
 
