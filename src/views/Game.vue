@@ -7,7 +7,11 @@
                  @restartGame="restartGame"/>
     </modal-box>
 
-    <btn-x :to="{name: 'intro'}">Menu</btn-x>
+    <btn-x class="btn-menu" :to="{name: 'intro'}">
+      <span/>
+      <span/>
+      <span/>
+    </btn-x>
 
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
@@ -222,5 +226,19 @@ export default {
 }
 .out-of-board {
     left: -2000px
+}
+.btn-menu {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 5;
+    width: 40px;
+    span {
+        background-color: white;
+        width: 20px;
+        height: 3px;
+        display: block;
+        margin: 3px 0;
+    }
 }
 </style>
