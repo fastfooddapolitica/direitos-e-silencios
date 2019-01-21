@@ -179,35 +179,36 @@ export default {
 
 <style lang="scss">
 .game-area {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .viewport {
-    overflow-x: auto;
-    height: 200px;
+  overflow-x: auto;
+  height: 220px;
 }
 .viewport-discard {
-    box-shadow: inset 0px 0px 20px black;
-    border-top: solid 2px #505050;
-    border-bottom: solid 2px #505050;
-    background-color: #ccc;
-    background-image: url('~@/assets/images/noise.png');
-    box-sizing: border-box;
+  box-shadow: inset 0px 0px 20px black;
+  border-top: solid 2px #505050;
+  border-bottom: solid 2px #505050;
+  background-color: #ccc;
+  background-image: url('~@/assets/images/noise.png');
+  box-sizing: border-box;
 }
 .play-area {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-wrap: nowrap;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  justify-content: center;
+  /* align-items: center; */
+  align-items: flex-start;
 }
 .discard-text {
-    position: absolute;
+  position: absolute;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -216,7 +217,7 @@ export default {
 }
 .sortable-ghost {
     opacity: .2;
-    background-color: skyblue;
+    background-color: purple;
 }
 .card-object {
     position: relative;
@@ -225,7 +226,7 @@ export default {
     flex-shrink: 0;
 }
 .out-of-board {
-    left: -2000px
+    left: -2000px;
 }
 .btn-menu {
     position: absolute;
