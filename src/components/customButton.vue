@@ -23,16 +23,17 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/vars.scss';
 .btn {
   text-decoration: none;
   max-width: 200px;
-  background-color: #7c6eb0;
+  background-color: $sec-color;
   /* background-image: url('~@/assets/images/noise.png'); */
   background-blend-mode: overlay;
   display: block;
   margin: 10px auto;
   padding: 10px;
-  color: white;
+  color: $light-color;
   border-radius: 10px;
   border: none;
   font-size: 14pt;
@@ -46,7 +47,7 @@ export default {
   font-family: Insanibu;
   border: solid 1px black;
   &:hover, &:focus {
-    background-color: #9c6eb0;
+    background-color: $shadow-color;
     /* background-color: #cc6565; */
     /* box-shadow: black 1px 1px 4px; */
   }

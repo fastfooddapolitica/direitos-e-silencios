@@ -7,6 +7,7 @@
 </template>
 
 <style lang="scss">
+@import '@/vars.scss';
 @font-face {
   font-family: Insanibu;
   src: url('~@/assets/fonts/Insanibu.woff');
@@ -18,8 +19,8 @@
 
 html {
   min-height: 100%;
-  background-color: #b9b6d1;
-  background-image: url('~@/assets/images/noise.png');
+  background-color: $pri-color;
+  /* background-image: url('~@/assets/images/noise.png'); */
   font-size: 14pt;
   font-family: DIN, sans-serif;
 }
@@ -43,11 +44,18 @@ h3 {
 }
 
 #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  min-height: 100%;
+}
+
+.light-text {
+  color: $light-color;
+}
+.sec-text {
+  color: $sec-color;
 }
 
 </style>
