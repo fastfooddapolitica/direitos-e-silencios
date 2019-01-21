@@ -26,8 +26,8 @@ export default {
 .btn {
   text-decoration: none;
   max-width: 200px;
-  background-color: #c52525;
-  background-image: url('~@/assets/images/noise.png');
+  background-color: #7c6eb0;
+  /* background-image: url('~@/assets/images/noise.png'); */
   background-blend-mode: overlay;
   display: block;
   margin: 10px auto;
@@ -40,13 +40,16 @@ export default {
   outline: none;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: black 1px 1px 2px;
+  /* box-shadow: black 1px 1px 2px; */
+  box-shadow: #78217d 4px 4px 0px;
   transition: all .5s;
   font-family: Insanibu;
+  border: solid 1px black;
   &:hover, &:focus {
-    background-color: #cc6565;
-        box-shadow: black 1px 1px 4px;
-    }
+    background-color: #9c6eb0;
+    /* background-color: #cc6565; */
+    /* box-shadow: black 1px 1px 4px; */
+  }
 }
 button::-moz-focus-inner {
     border: 0;
