@@ -7,11 +7,21 @@
 </template>
 
 <style lang="scss">
+@font-face {
+  font-family: Insanibu;
+  src: url('~@/assets/fonts/Insanibu.woff');
+}
+@font-face {
+  font-family: DIN;
+  src: url('~@/assets/fonts/FF_DIN_Regular.woff');
+}
+
 html {
   min-height: 100%;
   background-color: #b9b6d1;
   background-image: url('~@/assets/images/noise.png');
   font-size: 14pt;
+  font-family: DIN, sans-serif;
 }
 body {
   margin: 0;
@@ -21,6 +31,10 @@ ul {
   list-style-type: none;
   padding: 0;
 }
+h1, h2, h3 {
+  font-family: Insanibu;
+  font-weight: normal;
+}
 h2 {
   font-size: 18pt;
 }
@@ -29,7 +43,6 @@ h3 {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;

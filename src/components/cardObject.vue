@@ -55,38 +55,39 @@ export default {
 $card-size: 150px;
 
 .show-details {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  width: auto;
 }
 .card {
-    width: $card-size;
-    height: $card-size;
-    background-color: #b61f38;
-    background-image: url('~@/assets/images/card-front.png');
-    overflow: hidden;
-    cursor: grab;
-    position: relative;
-    background-size: 100%;
-    border-radius: 10px;
-    color: white;
-    padding: 10px;
-    /* padding-top: 70px; */
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0px #777;
-    font-size: 12pt;
-    text-shadow: black 1px 1px 1px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: $card-size;
+  height: $card-size;
+  background-color: #b61f38;
+  background-image: url('~@/assets/images/card-front.png');
+  overflow: hidden;
+  cursor: grab;
+  position: relative;
+  background-size: 100%;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  /* padding-top: 70px; */
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 4px 0px #777;
+  font-size: 12pt;
+  text-shadow: black 1px 1px 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Insanibu;
 }
 .card-year {
-    background-color: #b61f38;
-    padding: 4px 8px 0px 8px;
+  background-color: #b61f38;
+  padding: 4px 8px 0px 8px;
     border: solid 1px black;
     font-size: 12pt;
 }
