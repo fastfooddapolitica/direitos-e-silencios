@@ -8,21 +8,28 @@
 
 <style lang="scss">
 html {
-    min-height: 100%;
-    background-color: #b9b6d1;
-    background-image: url('~@/assets/images/noise.png');
+  min-height: 100%;
+  background-color: #b9b6d1;
+  background-image: url('~@/assets/images/noise.png');
+  font-size: 14pt;
 }
 body {
-    margin: 0;
-    min-height: 100%;
+  margin: 0;
+  min-height: 100%;
 }
 ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+}
+h2 {
+  font-size: 18pt;
+}
+h3 {
+  font-size: 16pt;
 }
 
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
