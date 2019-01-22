@@ -10,7 +10,7 @@
 @import '@/vars.scss';
 @font-face {
   font-family: Insanibu;
-  src: url('~@/assets/fonts/Insanibu.woff');
+  src: url('~@/assets/fonts/Insanibc.woff');
 }
 @font-face {
   font-family: DIN;

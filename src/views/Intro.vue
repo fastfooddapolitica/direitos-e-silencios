@@ -7,7 +7,7 @@
       <span class="sec-text">Silêncios</span>
     </h1>
     <ul>
-      <li><btn-x :to="{ name: 'game'}">Jogar</btn-x></li>
+      <li><btn-x class="play-btn" :to="{ name: 'game'}">Jogar</btn-x></li>
       <li><btn-x :to="{ name: 'tutorial'}">Instruções</btn-x></li>
       <li><btn-x :to="{ name: 'about'}">Sobre</btn-x></li>
       <li><btn-x @click="toggleFullscreen">Tela Cheia</btn-x></li>
@@ -46,11 +46,17 @@ export default {
   line-height: 40pt;
   margin: 0 0 50px 0;
   .sec-text {
-    text-shadow: $shadow-color 1px -1px 0;
+    text-shadow: $shadow-color 2px -3px 0;
   }
 }
 .subtitle {
   text-transform: uppercase;
   font-size: 10pt;
+}
+.play-btn {
+  max-width: 250px;
+  height: 70px;
+  font-size: 30pt;
+  /* box-shadow: $shadow-color 7px 7px 0px; */
 }
 </style>

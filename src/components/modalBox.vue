@@ -52,11 +52,10 @@ export default {
 
 <style lang="scss">
 .btn.close-btn {
-    width: auto;
-    margin: 0 0 0 auto;
-    font-weight: bold;
-    padding: 4px 10px 6px 10px;
-    z-index: 3000;
+  width: auto;
+  margin: 0 0 0 auto;
+  font-weight: bold;
+  padding: 4px 10px 6px 10px;
 }
 
 .modal {
@@ -92,5 +91,6 @@ export default {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px #0008;
+  z-index: 3000;
 }
 </style>

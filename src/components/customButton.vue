@@ -24,6 +24,7 @@ export default {
 
 <style lang="scss">
 @import '@/vars.scss';
+$btn-border-radius: 13px;
 .btn {
   text-decoration: none;
   max-width: 200px;
@@ -34,7 +35,7 @@ export default {
   margin: 10px auto;
   padding: 10px;
   color: $light-color;
-  border-radius: 10px;
+  border-radius: $btn-border-radius;
   border: none;
   font-size: 14pt;
   cursor: pointer;
@@ -42,15 +43,30 @@ export default {
   width: 100%;
   box-sizing: border-box;
   /* box-shadow: black 1px 1px 2px; */
-  box-shadow: #78217d 4px 4px 0px;
+  /* box-shadow: $shadow-color 4px 4px 0px; */
   transition: all .5s;
   font-family: Insanibu;
-  border: solid 1px black;
+  border: solid 2px black;
+  position: relative;
   &:hover, &:focus {
-    background-color: $shadow-color;
+    background-color: lighten($sec-color, 10%);
     /* background-color: #cc6565; */
     /* box-shadow: black 1px 1px 4px; */
   }
+  &:after {
+    display: block;
+    background-color: $shadow-color;
+    content: ".";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3px;
+    left: 4px;
+    color: $shadow-color;
+    border-radius: $btn-border-radius;
+    z-index: -1;
+    border: solid 2px black;
+}
 }
 button::-moz-focus-inner {
     border: 0;
