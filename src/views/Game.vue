@@ -7,11 +7,13 @@
                  @restartGame="restartGame"/>
     </modal-box>
 
-    <btn-x class="btn-menu" :to="{name: 'intro'}">
-      <span/>
-      <span/>
-      <span/>
-    </btn-x>
+    <div class="btn-menu-anchor">
+      <btn-x class="btn-menu" :to="{name: 'intro'}">
+        <span/>
+        <span/>
+        <span/>
+      </btn-x>
+    </div>
 
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
@@ -209,37 +211,38 @@ export default {
 }
 .discard-text {
   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 1;
-    margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  margin: 0;
 }
 .sortable-ghost {
-    opacity: .2;
-    background-color: purple;
+  opacity: .2;
+  background-color: purple;
 }
 .card-object {
-    position: relative;
-    left: 0;
-    transition: left 2s cubic-bezier(.65,.05,.36,1);
-    flex-shrink: 0;
+  position: relative;
+  left: 0;
+  transition: left 2s cubic-bezier(.65,.05,.36,1);
+  flex-shrink: 0;
 }
 .out-of-board {
-    left: -2000px;
+  left: -2000px;
 }
 .btn-menu {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    z-index: 5;
-    width: 40px;
-    span {
-        background-color: white;
-        width: 20px;
-        height: 3px;
-        display: block;
-        margin: 3px 0;
-    }
+  span {
+    background-color: white;
+    height: 3px;
+    display: block;
+    margin: 3px 0;
+  }
+}
+.btn-menu-anchor {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 40px;
 }
 </style>
