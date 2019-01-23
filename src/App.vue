@@ -18,14 +18,15 @@
 }
 
 html {
-  min-height: 100%;
+  min-height: 100vh;
   background-color: $pri-color;
   font-size: 14pt;
   font-family: DIN, sans-serif;
+  position:relative;
 }
 body {
   margin: 0;
-  min-height: 100%;
+  min-height: 100vh;
 }
 ul {
   list-style-type: none;
@@ -47,7 +48,7 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .light-text {
