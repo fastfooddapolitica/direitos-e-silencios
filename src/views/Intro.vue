@@ -7,18 +7,18 @@
     <!--   <br> -->
     <!--   <span class="sec-text">Silêncios</span> -->
     <!-- </h1> -->
-    <ul>
-      <li><btn-x class="play-btn" :to="{ name: 'game'}">Jogar</btn-x></li>
-      <li><btn-x :to="{ name: 'tutorial'}">Instruções</btn-x></li>
-      <li><btn-x :to="{ name: 'about'}">Sobre</btn-x></li>
-      <li><btn-x @click="toggleFullscreen">
-          <img svg-inline class="icon" src="@/assets/images/fullscreen.svg" alt="tela cheia" />
-      </btn-x></li>
-      <li><btn-x @click="toggleAudio">
-          <img v-if="mute" svg-inline class="icon" src="@/assets/images/mute.svg" alt="desligar sons" />
-          <img v-else svg-inline class="icon" src="@/assets/images/unmute.svg" alt="ligar sons" />
-      </btn-x></li>
-    </ul>
+    <btn-x class="play-btn" :to="{ name: 'game'}">Jogar</btn-x>
+    <div class="double-btn">
+      <btn-x class="help-btn" :to="{ name: 'tutorial'}">Instruções</btn-x>
+      <btn-x class="about-btn" :to="{ name: 'about'}">Sobre</btn-x>
+    </div>
+    <!-- <btn-x @click="toggleFullscreen"> -->
+    <!--     <img svg-inline class="icon" src="@/assets/images/fullscreen.svg" alt="tela cheia" /> -->
+    <!-- </btn-x> -->
+    <!-- <btn-x @click="toggleAudio"> -->
+    <!--     <img v-if="mute" svg-inline class="icon" src="@/assets/images/mute.svg" alt="desligar sons" /> -->
+    <!--     <img v-else svg-inline class="icon" src="@/assets/images/unmute.svg" alt="ligar sons" /> -->
+    <!-- </btn-x> -->
   </div>
 </template>
 
@@ -55,13 +55,13 @@ export default {
 <style lang="scss">
 @import '@/vars.scss';
 // .logo {
-//   font-size: 50pt;
-//   line-height: 40pt;
-//   margin: 0 0 50px 0;
-//   .sec-text {
-//     text-shadow: $shadow-color 2px -3px 0;
-//   }
-// }
+  //   font-size: 50pt;
+  //   line-height: 40pt;
+  //   margin: 0 0 50px 0;
+  //   .sec-text {
+    //     text-shadow: $shadow-color 2px -3px 0;
+    //   }
+  // }
 .logo {
   max-width: 90%;
   max-height: 8rem;
@@ -71,9 +71,18 @@ export default {
   font-size: 10pt;
 }
 .play-btn {
-  max-width: 250px;
-  height: 70px;
-  font-size: 30pt;
+  max-width: 300px;
+  height: 100px;
+  font-size: 50pt;
   /* box-shadow: $shadow-color 7px 7px 0px; */
+}
+.help-btn, .about-btn {
+  max-width: 45%;
+}
+.double-btn {
+  display: flex;
+  max-width: 300px;
+  margin: auto;
+  justify-content: space-between;
 }
 </style>
