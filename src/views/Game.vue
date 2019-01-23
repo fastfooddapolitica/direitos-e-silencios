@@ -195,7 +195,6 @@ export default {
   border-top: solid 2px #505050;
   border-bottom: solid 2px #505050;
   background-color: #ccc;
-  background-image: url('~@/assets/images/noise.png');
   box-sizing: border-box;
 }
 .play-area {

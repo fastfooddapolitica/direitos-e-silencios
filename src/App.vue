@@ -20,7 +20,6 @@
 html {
   min-height: 100%;
   background-color: $pri-color;
-  /* background-image: url('~@/assets/images/noise.png'); */
   font-size: 14pt;
   font-family: DIN, sans-serif;
 }
