@@ -6,7 +6,7 @@
           <span>{{cardData.name}}</span>
         </div>
       </div>
-      <div class="back">
+      <div v-show="flipped" class="back">
         <div class="card card-back x-font">
           <button class="btn show-details" @click="showDetails">?</button>
           <span>{{cardData.name}}</span>
