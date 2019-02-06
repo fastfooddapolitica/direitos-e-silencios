@@ -102,7 +102,7 @@ export default {
 .parts {
   display: flex;
   min-height: 70vh;
-  align-items: end;
+  align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
   @media (max-width: 1000px) {
