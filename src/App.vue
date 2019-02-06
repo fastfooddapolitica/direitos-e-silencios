@@ -1,11 +1,15 @@
 <template>
-  <div id="app">
-    <keep-alive>
-      <router-view/>
-    </keep-alive>
-    <a class="logo-link" href="http://fastfooddapolitica.com.br" target="_blank">
-      <img class="mini-logo" src="@/assets/images/logo_org.png">
-    </a>
+  <div id="app" :class="{'dark-background': $route.path === '/game'}">
+    <transition name="fade" mode="out-in">
+      <keep-alive>
+        <router-view class="pad-footer"/>
+      </keep-alive>
+    </transition>
+    <div class="footer">
+      <a href="http://fastfooddapolitica.com.br" target="_blank">
+        <img class="mini-logo" src="@/assets/images/logo_org.png">
+      </a>
+    </div>
   </div>
 </template>
 
@@ -22,7 +26,6 @@
 }
 
 html {
-  min-height: 100vh;
   background-color: $pri-color;
   font-size: 14pt;
   font-family: DIN, sans-serif;
@@ -30,6 +33,8 @@ html {
 }
 body {
   margin: 0;
+}
+html, body, #app {
   min-height: 100vh;
 }
 ul {
@@ -52,11 +57,13 @@ h3 {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  min-height: 100vh;
 }
 
 .light-text {
   color: $light-color;
+}
+.x-font {
+  font-family: Insanibu;
 }
 .sec-text {
   color: $sec-color;
@@ -65,8 +72,32 @@ h3 {
   max-width: 90%;
   max-height: 4rem;
 }
-.logo-link {
-  margin: 4rem;
-  display: inline-block;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.dark-background {
+  background-color: $game-background-color;
+}
+.pad-footer {
+  padding-bottom: 6rem;
+  padding-top: 0.1rem;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .3s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: all .3s;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateY(-100%);
 }
 </style>

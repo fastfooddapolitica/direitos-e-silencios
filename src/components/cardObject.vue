@@ -2,12 +2,12 @@
   <div class="flip-container" :class="{flip: flipped}">
     <div class="flipper">
       <div class="front">
-        <div class="card">
+        <div class="card x-font">
           <span>{{cardData.name}}</span>
         </div>
       </div>
       <div class="back">
-        <div class="card card-back">
+        <div class="card card-back x-font">
           <button class="btn show-details" @click="showDetails">?</button>
           <span>{{cardData.name}}</span>
           <span class="card-year">{{cardData.year}}</span>
@@ -84,7 +84,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: Insanibu;
 }
 .card-year {
   background-color: #b61f38;

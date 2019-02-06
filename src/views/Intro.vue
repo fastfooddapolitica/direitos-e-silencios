@@ -101,12 +101,13 @@ export default {
 }
 .parts {
   display: flex;
-  min-height: 100vh;
-  align-items: center;
+  min-height: 70vh;
+  align-items: end;
   justify-content: center;
   flex-wrap: wrap;
   @media (max-width: 1000px) {
     flex-direction: column;
+    align-items: center;
     .part-2 {
       padding: 0;
     }

@@ -15,7 +15,7 @@
       </btn-x>
     </div>
 
-    <p class="light-text">ARRASTE AS CARTAS E ORDENE-AS CRONOLÓGICAMENTE</p>
+    <p class="light-text x-font">ARRASTE AS CARTAS E ORDENE-AS CRONOLÓGICAMENTE</p>
 
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
@@ -29,7 +29,7 @@
     </div>
 
     <div class="viewport viewport-discard">
-      <draggable v-model="discardPile" class="play-area"
+      <draggable v-model="discardPile" class="play-area discard-area"
                 :options="{group:'card', draggable: '.flip-container'}"
                 :style="{'min-width': discardMinWidth}"
                 @start="dragStart()" @end="dragEnd()">
@@ -37,7 +37,7 @@
                     class="card-object"
                     :class="{'out-of-board': cardsOutOfBoard}"
                     ref="discardPileComponents" :key="card.num" :cardData="card"/>
-        <p slot="footer" class="discard-text light-text">não existe</p>
+        <p slot="footer" class="discard-text x-font">não existe</p>
       </draggable>
     </div>
 
@@ -188,12 +188,12 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: $game-background-color;
   align-items: center;
 }
 .viewport {
   overflow-x: auto;
   height: $viewport-size;
+  width: 100%;
 }
 .viewport-discard {
   /* box-shadow: inset 0px 0px 20px black; */
@@ -208,6 +208,7 @@ export default {
   padding: 0 2rem;
   min-width: $viewport-size;
   transition: width 1s;
+  width: auto;
 }
 .play-area {
   width: 100%;
@@ -220,6 +221,9 @@ export default {
   /* align-items: center; */
   align-items: flex-start;
 }
+.discard-area {
+  align-items: flex-end;
+}
 .discard-text {
   position: absolute;
   left: 50%;
@@ -227,6 +231,7 @@ export default {
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
   margin: 0;
+  color: $sec-color;
 }
 .sortable-ghost {
   opacity: .2;
