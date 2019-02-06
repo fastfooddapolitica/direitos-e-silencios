@@ -51,15 +51,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
-$card-size: 150px;
+@import '@/vars.scss';
 
 .show-details {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 3px;
+  right: 3px;
   margin: 0;
   width: auto;
+  border-radius: 200px;
+  padding: .2em 0.5em;
 }
 .card {
   width: $card-size;
@@ -73,10 +74,10 @@ $card-size: 150px;
   border-radius: 10px;
   color: white;
   padding: 10px;
-  /* padding-top: 70px; */
+  padding-top: $card-size / 5 * 2;
   background-repeat: no-repeat;
   box-sizing: border-box;
-  box-shadow: 2px 2px 4px 0px #777;
+  box-shadow: 2px 2px 4px 0px #000;
   font-size: 12pt;
   text-shadow: black 1px 1px 1px;
   display: flex;

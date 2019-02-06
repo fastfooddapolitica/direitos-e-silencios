@@ -2,8 +2,8 @@
   <div class="parts">
     <div class="part part-1">
       <p class="subtitle light-text">Aprenda sobre os direitos e legislações da mulher brasileira!</p>
-      <img class="logo" src="@/assets/images/logo_trans.png">
-      <img class="logo sublogo" src="/android-chrome-512x512.png">
+      <img class="logo block-center" src="@/assets/images/logo_trans.png">
+      <img class="logo sublogo block-center" src="/android-chrome-512x512.png">
       <!-- <h1 class="logo"> -->
       <!--   <span class="light-text">Direitos e</span> -->
       <!--   <br> -->
@@ -67,11 +67,13 @@ export default {
     //     text-shadow: $shadow-color 2px -3px 0;
     //   }
   // }
+.block-center {
+  display: block;
+  margin: auto;
+}
 .logo {
   max-width: 90%;
   max-height: 8rem;
-  display: block;
-  margin: auto;
 }
 .sublogo {
   max-height: 10rem;

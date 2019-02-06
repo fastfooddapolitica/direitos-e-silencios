@@ -3,11 +3,15 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
+    <a class="logo-link" href="http://fastfooddapolitica.com.br" target="_blank">
+      <img class="mini-logo" src="@/assets/images/logo_org.png">
+    </a>
   </div>
 </template>
 
 <style lang="scss">
 @import '@/vars.scss';
+
 @font-face {
   font-family: Insanibu;
   src: url('~@/assets/fonts/Insanibc.woff');
@@ -57,5 +61,12 @@ h3 {
 .sec-text {
   color: $sec-color;
 }
-
+.mini-logo {
+  max-width: 90%;
+  max-height: 4rem;
+}
+.logo-link {
+  margin: 4rem;
+  display: inline-block;
+}
 </style>

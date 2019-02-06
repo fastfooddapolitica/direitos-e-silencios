@@ -15,6 +15,8 @@
       </btn-x>
     </div>
 
+    <p class="light-text">ARRASTE AS CARTAS E ORDENE-AS CRONOLÓGICAMENTE</p>
+
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
                  :style="{'min-width': playMinWidth}"
@@ -35,7 +37,7 @@
                     class="card-object"
                     :class="{'out-of-board': cardsOutOfBoard}"
                     ref="discardPileComponents" :key="card.num" :cardData="card"/>
-        <p slot="footer" class="discard-text">Descarte</p>
+        <p slot="footer" class="discard-text light-text">não existe</p>
       </draggable>
     </div>
 
@@ -98,7 +100,7 @@ export default {
       this.triesCount = 0
       var index = 0
       var cardsTmp = cards.slice()
-      for (var i = 0; i < 7; i++) {
+      for (var i = 0; i < 5; i++) {
         index = Math.floor(Math.random() * cardsTmp.length)
         this.cardsInPlay.push(cardsTmp.splice(index, 1)[0])
       }
@@ -180,22 +182,32 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/vars.scss';
 .game-area {
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: $game-background-color;
+  align-items: center;
 }
 .viewport {
   overflow-x: auto;
-  height: 220px;
+  height: $viewport-size;
 }
 .viewport-discard {
-  box-shadow: inset 0px 0px 20px black;
-  border-top: solid 2px #505050;
-  border-bottom: solid 2px #505050;
-  background-color: #ccc;
+  /* box-shadow: inset 0px 0px 20px black; */
+  /* border: solid 2px #333; */
+  /* border-top: solid 2px #505050; */
+  /* border-bottom: solid 2px #505050; */
+  /* background-color: #ccc; */
+  border: dashed .3rem $sec-color;
+  border-radius: 4rem;
+  background-color: $shadow-color;
   box-sizing: border-box;
+  padding: 0 2rem;
+  min-width: $viewport-size;
+  transition: width 1s;
 }
 .play-area {
   width: 100%;

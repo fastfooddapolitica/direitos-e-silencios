@@ -1,7 +1,8 @@
 <template>
   <div class="card-details">
-    <h2>{{cardData.year}} - {{cardData.name}}</h2>
+    <h2><span v-if="exists">{{cardData.year}} - </span>{{cardData.name}}</h2>
     <h3>{{ cardData.subtitle }}</h3>
+    <p v-if="!exists"><strong>- Não existe -</strong></p>
     <p v-for="(line, i) in description" :key="i">{{ line }}</p>
     <ul>
       <li v-for="link in cardData.links" :key="link.url">
@@ -25,6 +26,9 @@ export default {
   computed: {
     description () {
       return strOrArrayToArray(this.cardData.description)
+    },
+    exists () {
+      return this.cardData.year !== 'x'
     }
   }
 }
