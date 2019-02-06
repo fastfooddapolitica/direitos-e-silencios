@@ -1,31 +1,29 @@
 <template>
-  <transition name="fade">
-    <div v-if="isOpen">
-      <div class="modal-backdrop"/>
+  <div v-if="isOpen">
+    <div class="modal-backdrop"/>
+    <div
+      class="modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      style="display:block;">
       <div
-        class="modal"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="myModalLabel"
-        style="display:block;">
-        <div
-          id="modal-dialog"
-          v-click-outside="close"
-          class="modal-dialog"
-          role="document">
-          <div class="modal-content">
-            <btn-x
-              class="close-btn"
-              @click="close"
-              aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </btn-x>
-            <slot/>
-          </div>
+        id="modal-dialog"
+        v-click-outside="close"
+        class="modal-dialog"
+        role="document">
+        <div class="modal-content">
+          <btn-x
+            class="close-btn"
+            @click="close"
+            aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </btn-x>
+          <slot/>
         </div>
       </div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
