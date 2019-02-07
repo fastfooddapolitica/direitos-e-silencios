@@ -78,6 +78,7 @@ h3 {
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
+  text-align: right;
 }
 .dark-background {
   background-color: $game-background-color;
@@ -85,6 +86,19 @@ h3 {
 .pad-footer {
   padding-bottom: 6rem;
   padding-top: 0.1rem;
+}
+
+*::-webkit-scrollbar {
+  width: 1em;
+}
+*::-webkit-scrollbar-track {
+  background-color: $sec-color;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+* {
+  scrollbar-color: white $sec-color;
 }
 
 .fade-enter-active, .fade-leave-active {

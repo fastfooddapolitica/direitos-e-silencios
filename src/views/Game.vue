@@ -80,10 +80,10 @@ export default {
   },
   computed: {
     discardMinWidth () {
-      return this.discardPile.length * 170 + 'px'
+      return (this.discardPile.length || 1) * 220 + 'px'
     },
     playMinWidth () {
-      return this.cardsInPlay.length * 170 + 'px'
+      return (this.cardsInPlay.length || 1) * 220 + 'px'
     }
   },
   methods: {
@@ -201,20 +201,15 @@ export default {
   /* border-top: solid 2px #505050; */
   /* border-bottom: solid 2px #505050; */
   /* background-color: #ccc; */
-  border: dashed .3rem $sec-color;
-  border-radius: 4rem;
-  background-color: $shadow-color;
   box-sizing: border-box;
   padding: 0 2rem;
-  min-width: $viewport-size;
-  transition: width 1s;
-  width: auto;
 }
 .play-area {
-  width: 100%;
+  /* width: 100%; */
+  /* width: 1500px; */
   height: 100%;
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   box-sizing: border-box;
   justify-content: center;
@@ -223,6 +218,10 @@ export default {
 }
 .discard-area {
   align-items: flex-end;
+  border: dashed .3rem $sec-color;
+  border-radius: 4rem;
+  background-color: $shadow-color;
+  transition: width 1s;
 }
 .discard-text {
   position: absolute;
