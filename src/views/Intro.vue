@@ -101,8 +101,8 @@ export default {
 }
 .parts {
   display: flex;
-  min-height: 70vh;
-  align-items: flex-end;
+  min-height: 100vh;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   @media (max-width: 1000px) {

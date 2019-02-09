@@ -2,14 +2,9 @@
   <div id="app" :class="{'dark-background': $route.path === '/game'}">
     <transition name="fade" mode="out-in">
       <keep-alive>
-        <router-view class="pad-footer"/>
+        <router-view/>
       </keep-alive>
     </transition>
-    <div class="footer">
-      <a href="http://fastfooddapolitica.com.br" target="_blank">
-        <img class="mini-logo" src="@/assets/images/logo_org.png">
-      </a>
-    </div>
   </div>
 </template>
 
@@ -82,10 +77,6 @@ h3 {
 }
 .dark-background {
   background-color: $game-background-color;
-}
-.pad-footer {
-  padding-bottom: 6rem;
-  padding-top: 0.1rem;
 }
 
 *::-webkit-scrollbar {
