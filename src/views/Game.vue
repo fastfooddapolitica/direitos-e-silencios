@@ -15,7 +15,7 @@
       </btn-x>
     </div>
 
-    <p class="light-text x-font">ARRASTE AS CARTAS E ORDENE-AS CRONOLÓGICAMENTE</p>
+    <p class="light-text x-font">ARRASTE AS CARTAS E ORDENE-AS CRONOLOGICAMENTE</p>
 
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
@@ -202,7 +202,7 @@ export default {
   /* border-bottom: solid 2px #505050; */
   /* background-color: #ccc; */
   box-sizing: border-box;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 }
 .play-area {
   /* width: 100%; */

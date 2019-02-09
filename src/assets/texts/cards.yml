@@ -1,5 +1,5 @@
 -
-  name: Aborto
+  name: Aborto em caso de estupro ou de risco à vida
   subtitle: Determinação por lei do direito à interrupção da gravidez resultante de estupro ou que ofereça alto risco de morte à gestante.
   year: 1940
   num: 1
@@ -164,7 +164,7 @@
       text: Mapeamento das Delegacias da Mulher no Brasil
       url: https://www12.senado.leg.br/institucional/omv/entenda-a-violencia/pdfs/mapeamento-das-delegacias-da-mulher-no-brasil
 -
-  name: Depósitos bancários no próprio nome
+  name: Depósitos bancários no próprio nome, mesmo se seu marido for contra
   year: 1934
   num: 10
   description:
@@ -283,7 +283,7 @@
       url: http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12605.htm
 
 -
-  name: Integração do trabalho doméstico à Previdência Social
+  name: Integração do trabalho doméstico remunerado à Previdência Social
   year: 2013
   num: 19
   description: A Emenda Constitucional n. 72, de 2 de abril de 2013, altera a redação do parágrafo único do art. 7º da Constituição Federal para estabelecer a igualdade de direitos trabalhistas entre os trabalhadores domésticos e os demais trabalhadores urbanos e rurais. Antes disso, o direito à aposentadoria permanecia nas mãos do empregador.
@@ -383,7 +383,7 @@
       url: http://www.camara.gov.br/proposicoesWeb/fichadetramitacao?idProposicao=470681
 
 -
-  name: Proibição do parto com algemas
+  name: Proibição do parto com algemas de mulheres encarceradas
   year: 2016
   num: 26
   description:
