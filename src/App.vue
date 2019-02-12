@@ -63,6 +63,9 @@ a {
 .x-font {
   font-family: Insanibu;
 }
+.margin {
+  margin: 1rem 2rem;
+}
 .sec-text {
   color: $sec-color;
 }
