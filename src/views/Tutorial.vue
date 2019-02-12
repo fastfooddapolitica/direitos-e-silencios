@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-page">
     <h1>Instruções:</h1>
     <p>A Constituição Federal de 1988 institui o princípio da igualdade, que abrange a igualdade entre os sexos perante a lei. Entretanto, as mulheres nem sempre tiveram - e ainda não têm - os mesmos direitos que os homens.</p>
     <p>Quais direitos das mulheres já foram formalizados aqui no Brasil?</p>
@@ -17,8 +17,7 @@
     <p>Mas se você já quiser saber o resultado, clique em “Revelar cartas” para saber as datas e acessar mais informações (no verso, há um ponto de interrogação no canto superior direito, clicando nele, você saberá a referência bibliográfica da carta e mais dados).</p>
     <p>Bom jogo!</p>
 
-    <ul>
-      <li><btn-x :to="{ name: 'intro'}">Voltar</btn-x></li>
-    </ul>
+    <br>
+    <btn-x :to="{ name: 'intro'}">Voltar</btn-x>
   </div>
 </template>

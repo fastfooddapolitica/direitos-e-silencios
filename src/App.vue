@@ -46,6 +46,9 @@ h2 {
 h3 {
   font-size: 16pt;
 }
+a {
+  color: white;
+}
 
 #app {
   -webkit-font-smoothing: antialiased;
@@ -77,6 +80,19 @@ h3 {
 }
 .dark-background {
   background-color: $game-background-color;
+}
+.text-page {
+  color: white;
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  p, ul {
+    text-align: left;
+  }
+  ul {
+    padding: 0 2rem;
+    list-style-type: circle;
+  }
 }
 
 *::-webkit-scrollbar {
