@@ -41,7 +41,9 @@
       </draggable>
     </div>
 
-    <btn-x @click="checkCards">Verificar cartas</btn-x>
+    <div class="verif-cards-btn-anchor">
+      <btn-x @click="checkCards">Verificar cartas</btn-x>
+    </div>
   </div>
 </template>
 
@@ -259,5 +261,8 @@ export default {
   top: 0;
   right: 10px;
   width: 40px;
+}
+.verif-cards-btn-anchor {
+  z-index: 1;
 }
 </style>
