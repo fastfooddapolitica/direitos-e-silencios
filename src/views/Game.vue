@@ -29,6 +29,7 @@
     </div>
 
     <div class="viewport viewport-discard">
+      <p class="discard-text x-font">não existe</p>
       <draggable v-model="discardPile" class="play-area discard-area"
                 :options="{group:'card', draggable: '.flip-container'}"
                 :style="{'min-width': discardMinWidth}"
@@ -37,7 +38,6 @@
                     class="card-object"
                     :class="{'out-of-board': cardsOutOfBoard}"
                     ref="discardPileComponents" :key="card.num" :cardData="card"/>
-        <p slot="footer" class="discard-text x-font">não existe</p>
       </draggable>
     </div>
 
@@ -205,6 +205,7 @@ export default {
   /* background-color: #ccc; */
   box-sizing: border-box;
   padding: 1rem 2rem;
+  position: relative;
 }
 .play-area {
   /* width: 100%; */
