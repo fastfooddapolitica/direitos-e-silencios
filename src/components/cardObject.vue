@@ -38,7 +38,7 @@ export default {
       this.flipped = false
     },
     showDetails () {
-      this.$matomo.trackEvent('jogo', 'revelou cartas', this.cardData.name)
+      this.$matomo.trackEvent('jogo', 'viu detalhes', this.cardData.name)
       this.$emit(
         'openModal',
         {
