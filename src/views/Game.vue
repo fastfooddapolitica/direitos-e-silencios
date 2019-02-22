@@ -109,6 +109,7 @@ export default {
       await sleep(500)
       this.cardsOutOfBoard = false
       this.$audio.play('distribute')
+      this.$matomo.trackEvent('jogo', 'começou partida')
     },
     openModal (data) {
       this.modalComponent = data.component
@@ -139,9 +140,13 @@ export default {
       // Play sound
       if (this.rightSequence) {
         this.$audio.play('correct')
+        this.$matomo.trackEvent('jogo', 'verificou cartas', 'acertou')
       } else {
         this.$audio.play('wrong')
+        this.$matomo.trackEvent('jogo', 'verificou cartas', 'errou')
       }
+      this.$matomo.trackEvent('jogo', 'verificou cartas', 'min erradas', this.minWrongCardsCount)
+      this.$matomo.trackEvent('jogo', 'verificou cartas', 'tentativas', this.triesCount)
       this.openModal(
         {
           component: endGame,
@@ -160,6 +165,7 @@ export default {
       }
     },
     flipCards () {
+      this.$matomo.trackEvent('jogo', 'revelou cartas')
       this.closeModal()
       for (var card of this.allCardsComponents()) {
         if (card) card.flip()

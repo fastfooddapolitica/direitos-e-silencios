@@ -38,6 +38,7 @@ export default {
       this.flipped = false
     },
     showDetails () {
+      this.$matomo.trackEvent('jogo', 'revelou cartas', this.cardData.name)
       this.$emit(
         'openModal',
         {
