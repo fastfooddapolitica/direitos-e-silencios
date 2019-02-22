@@ -26,6 +26,7 @@
     "sass-loader": "^7.0.1",
     "screenfull": "^4.0.0",
     "vue-draggable": "^1.0.9",
+    "vue-matomo": "^3.7.0-2",
     "vue-svg-inline-loader": "^1.2.10",
     "vue-template-compiler": "^2.5.21",
     "vuedraggable": "^2.17.0",
