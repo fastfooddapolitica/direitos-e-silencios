@@ -88,9 +88,10 @@ export default {
 }
 .card-year {
   background-color: #b61f38;
-  padding: 4px 8px 0px 8px;
-    border: solid 1px black;
-    font-size: 12pt;
+  padding: 4px 8px;
+  border: solid 1px black;
+  font-size: 14pt;
+  margin-top: .5rem;
 }
 .card-back {
     background-color: #7670b3;

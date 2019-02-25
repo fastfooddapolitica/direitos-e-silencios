@@ -15,7 +15,7 @@
       </btn-x>
     </div>
 
-    <p class="margin light-text x-font">ARRASTE AS CARTAS E ORDENE-AS CRONOLOGICAMENTE</p>
+    <p class="margin light-text x-font"><small>ARRASTE AS CARTAS E ORDENE-AS CRONOLOGICAMENTE</small></p>
 
     <div class="viewport">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"

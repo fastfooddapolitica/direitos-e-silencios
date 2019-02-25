@@ -5,7 +5,7 @@
     <btn-x @click="$emit('tryAgain')" v-if="!won">Tentar de novo</btn-x>
     <btn-x @click="$emit('flipCards')">Revelar cartas</btn-x>
     <btn-x @click="$emit('restartGame')">Novo jogo</btn-x>
-    <p>Por favor! Responda ao nosso <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVjVvijesilKEJkVz6wn-3LLrBbD26jFAZZuPJ6-HYrEa3wQ/viewform" target="_blank" rel="noopener noreferrer">questionário</a>!</p>
+    <p>Muito obrigada por jogar! Queremos muito saber o que você achou para seguirmos desenvolvendo jogos sobre temas tão importantes. Por favor, responde essas <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVjVvijesilKEJkVz6wn-3LLrBbD26jFAZZuPJ6-HYrEa3wQ/viewform" target="_blank" rel="noopener noreferrer">perguntinhas aqui</a>? (Leva menos de três minutos).</p>
   </div>
 </template>
 
