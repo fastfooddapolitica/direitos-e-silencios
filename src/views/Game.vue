@@ -3,7 +3,7 @@
 
     <modal-box modal-id="game" ref="modal">
       <component :is="modalComponent" v-bind="modalProps"
-                 @tryAgain="closeModal" @flipCards="flipCards"
+                 @tryAgain="closeModal" @flipCards="clickedFlipCards"
                  @restartGame="restartGame"/>
     </modal-box>
 
@@ -140,6 +140,7 @@ export default {
       // Play sound
       if (this.rightSequence) {
         this.$audio.play('correct')
+        this.flipCards()
         this.$matomo.trackEvent('jogo', 'verificou cartas', 'acertou')
       } else {
         this.$audio.play('wrong')
@@ -164,8 +165,11 @@ export default {
         return []
       }
     },
-    flipCards () {
+    clickedFlipCards () {
       this.$matomo.trackEvent('jogo', 'revelou cartas')
+      this.flipCards()
+    },
+    flipCards () {
       this.closeModal()
       for (var card of this.allCardsComponents()) {
         if (card) card.flip()
