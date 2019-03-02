@@ -13,16 +13,18 @@
     <div class="part part-2">
       <btn-x class="play-btn" :to="{ name: 'game'}">Jogar</btn-x>
       <div class="double-btn">
-        <btn-x class="help-btn" :to="{ name: 'tutorial'}">Instruções</btn-x>
-        <btn-x class="about-btn" :to="{ name: 'about'}">Sobre</btn-x>
+        <btn-x class="small-btn" :to="{ name: 'tutorial'}">Instruções</btn-x>
+        <btn-x class="small-btn" :to="{ name: 'about'}">Sobre</btn-x>
       </div>
-      <!-- <btn-x @click="toggleFullscreen"> -->
-      <!--     <img svg-inline class="icon" src="@/assets/images/fullscreen.svg" alt="tela cheia" /> -->
-      <!-- </btn-x> -->
-      <!-- <btn-x @click="toggleAudio"> -->
-      <!--     <img v-if="mute" svg-inline class="icon" src="@/assets/images/mute.svg" alt="desligar sons" /> -->
-      <!--     <img v-else svg-inline class="icon" src="@/assets/images/unmute.svg" alt="ligar sons" /> -->
-      <!-- </btn-x> -->
+      <div class="double-btn">
+        <btn-x class="small-btn no-back-btn" @click="toggleFullscreen">
+            <img svg-inline class="icon" src="@/assets/images/fullscreen.svg" alt="tela cheia" />
+        </btn-x>
+        <btn-x class="small-btn no-back-btn" @click="toggleAudio">
+            <img v-if="mute" svg-inline class="icon" src="@/assets/images/mute.svg" alt="desligar sons" />
+            <img v-else svg-inline class="icon" src="@/assets/images/unmute.svg" alt="ligar sons" />
+        </btn-x>
+      </div>
     </div>
   </div>
 </template>
@@ -90,14 +92,28 @@ export default {
   padding: 1rem;
   /* box-shadow: $shadow-color 7px 7px 0px; */
 }
-.help-btn, .about-btn {
+.small-btn {
   max-width: 45%;
+}
+.no-back-btn {
+  background: 0;
+  border: 0;
+  margin: 0;
+  width: 3rem;
+  &:hover, &:focus {
+    background: 0;
+  }
+  &:after {
+    content: "";
+    background: 0;
+    border: 0;
+  }
 }
 .double-btn {
   display: flex;
   max-width: 350px;
   margin: auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 .parts {
   display: flex;
