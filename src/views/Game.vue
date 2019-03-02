@@ -102,13 +102,15 @@ export default {
       this.triesCount = 0
       var index = 0
       var cardsTmp = cards.slice()
+      this.$audio.play('suffle')
+      await sleep(300)
       for (var i = 0; i < 5; i++) {
         index = Math.floor(Math.random() * cardsTmp.length)
         this.cardsInPlay.push(cardsTmp.splice(index, 1)[0])
+        this.$audio.play('distribute')
+        await sleep(300)
       }
-      await sleep(500)
       this.cardsOutOfBoard = false
-      this.$audio.play('distribute')
       this.$matomo.trackEvent('jogo', 'começou partida')
     },
     openModal (data) {
