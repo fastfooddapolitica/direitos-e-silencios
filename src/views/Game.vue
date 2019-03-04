@@ -89,6 +89,13 @@ export default {
     }
   },
   methods: {
+    allCardsComponents () {
+      if (this.$refs.cardsInPlayComponents) {
+        return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
+      } else {
+        return []
+      }
+    },
     async restartGame () {
       this.closeModal()
       if (!this.cardsOutOfBoard) {
@@ -118,6 +125,11 @@ export default {
       this.modalProps = data.props
       this.$refs.modal.open()
     },
+    getCardComponent (card) {
+      for (var comp of this.allCardsComponents()) {
+        if (comp && comp.cardData === card) return comp
+      }
+    },
     checkCards () {
       var lastYear = 0
       this.rightSequence = true
@@ -130,6 +142,7 @@ export default {
           this.minWrongCardsCount += 1
         } else {
           lastYear = card.year
+          this.getCardComponent(card).flip()
         }
       }
       // Check discard pile
@@ -137,6 +150,8 @@ export default {
         if (card.year !== 'x') {
           this.rightSequence = false
           this.minWrongCardsCount += 1
+        } else {
+          this.getCardComponent(card).flip()
         }
       }
       // Play sound
@@ -159,13 +174,6 @@ export default {
           }
         }
       )
-    },
-    allCardsComponents () {
-      if (this.$refs.cardsInPlayComponents) {
-        return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
-      } else {
-        return []
-      }
     },
     clickedFlipCards () {
       this.$matomo.trackEvent('jogo', 'revelou cartas')
