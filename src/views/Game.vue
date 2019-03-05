@@ -43,6 +43,7 @@
 
     <div class="verif-cards-btn-anchor">
       <btn-x @click="checkCards">Verificar cartas</btn-x>
+      <btn-x @click="restartGame">Novo jogo</btn-x>
     </div>
   </div>
 </template>
