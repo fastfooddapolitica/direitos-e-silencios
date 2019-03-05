@@ -96,7 +96,7 @@ export default {
 .card-back {
     background-color: #7670b3;
     background-image: url('~@/assets/images/card-back.png');
-    font-size: 11pt;
+    font-size: 10pt;
 }
 span {
     pointer-events: none;
