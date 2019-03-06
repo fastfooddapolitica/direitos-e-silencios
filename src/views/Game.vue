@@ -213,19 +213,36 @@ export default {
         if (comp && comp.cardData === card) return comp
       }
     },
-    checkCards () {
+    async animatedFlip (card) {
+      let comp = this.getCardComponent(card)
+      if (!comp.flipped) {
+        comp.flip()
+        await sleep(1000)
+      }
+    },
+    async animatedUnflip (card) {
+      let comp = this.getCardComponent(card)
+      if (comp.flipped) {
+        comp.unflip()
+        await sleep(1000)
+      }
+    },
+    async checkCards (event) {
+      if (event) event.stopPropagation()
       var lastYear = 0
       this.rightSequence = true
       this.minWrongCardsCount = 0
       this.triesCount += 1
+
       // Check timeline
       for (var card of this.cardsInPlay) {
         if (card.year < lastYear || card.year === 'x') {
           this.rightSequence = false
           this.minWrongCardsCount += 1
+          await this.animatedUnflip(card)
         } else {
           lastYear = card.year
-          this.getCardComponent(card).flip()
+          await this.animatedFlip(card)
         }
       }
       // Check discard pile
@@ -233,14 +250,15 @@ export default {
         if (card.year !== 'x') {
           this.rightSequence = false
           this.minWrongCardsCount += 1
+          await this.animatedUnflip(card)
         } else {
-          this.getCardComponent(card).flip()
+          await this.animatedFlip(card)
         }
       }
       // Play sound
       if (this.rightSequence) {
         this.$audio.play('correct')
-        this.flipCards()
+        // this.flipCards()
         this.$matomo.trackEvent('jogo', 'verificou cartas', 'acertou')
       } else {
         this.$audio.play('wrong')
