@@ -132,8 +132,9 @@
   num: 7
   description: Na CF de 88 é prevista a proibição de descriminação mediante orientação sexual, porém não existe ainda uma legislação vigente que regulamente isso. Em 2006, o PLC 122/2006 pretendia prever punição para discriminação por gênero, mas foi arquivado.
   links:
-    text: PROJETO DE LEI DA C MARA nº 122, de 2006 - (CRIMINALIZA A HOMOFOBIA)
-    url: https://www25.senado.leg.br/web/atividade/materias/-/materia/79604
+    -
+      text: 'PROJETO DE LEI DA CÂMARA nº 122, de 2006 - (CRIMINALIZA A HOMOFOBIA)'
+      url: https://www25.senado.leg.br/web/atividade/materias/-/materia/79604
 
 -
   name: Criminalização do racismo
