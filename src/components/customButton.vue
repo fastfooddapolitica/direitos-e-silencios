@@ -8,11 +8,14 @@
 export default {
   name: 'btn-x',
   props: {
-    to: Object
+    to: Object,
+    sound: {
+      default: 'click'
+    }
   },
   methods: {
     clicked (e) {
-      this.$audio.play('click')
+      if (this.sound) this.$audio.play(this.sound)
       this.$emit('click', e)
       if (this.to) {
         this.$router.push(this.to)

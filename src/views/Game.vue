@@ -22,14 +22,14 @@
       <div class="half text-right">
         <transition name="fade">
           <div v-show="timelineScroll.left">
-            <btn-x@click="scroll('timeline', -1)"><</btn-x>
+            <btn-x @click="scroll('timeline', -1)" :sound="false"><</btn-x>
           </div>
         </transition>
       </div>
       <div class="half text-left">
         <transition name="fade">
           <div v-show="timelineScroll.right">
-            <btn-x @click="scroll('timeline', 1)">></btn-x>
+            <btn-x @click="scroll('timeline', 1)" :sound="false">></btn-x>
           </div>
         </transition>
       </div>
@@ -52,14 +52,14 @@
       <div class="half text-right">
         <transition name="fade">
           <div v-show="discardScroll.left">
-            <btn-x@click="scroll('discard', -1)"><</btn-x>
+            <btn-x@click="scroll('discard', -1)" :sound="false"><</btn-x>
           </div>
         </transition>
       </div>
       <div class="half text-left">
         <transition name="fade">
           <div v-show="discardScroll.right">
-            <btn-x @click="scroll('discard', 1)">></btn-x>
+            <btn-x @click="scroll('discard', 1)" :sound="false">></btn-x>
           </div>
         </transition>
       </div>
