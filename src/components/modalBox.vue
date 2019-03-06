@@ -49,6 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/vars.scss';
 .btn.close-btn {
   width: auto;
   margin: 0 0 0 auto;
@@ -65,6 +66,14 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
+  a {
+    color: $sec-color;
+  }
+  ul {
+    text-align: left;
+    padding-left: 1rem;
+    list-style-type: circle;
+  }
 }
 
 .modal-backdrop {
