@@ -309,6 +309,7 @@ export default {
   box-sizing: border-box;
   padding: 1rem 2rem;
   position: relative;
+  height: $viewport-size + 20px;
 }
 .play-area {
   /* width: 100%; */
