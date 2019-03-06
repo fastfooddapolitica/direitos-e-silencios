@@ -10,7 +10,8 @@
         <div class="card card-back x-font">
           <button class="btn show-details" @click="showDetails">?</button>
           <span>{{cardData.name}}</span>
-          <span class="card-year">{{cardData.year}}</span>
+          <span v-if="exists" class="card-year">{{cardData.year}}</span>
+          <span v-else class="card-year card-unexists">não existe</span>
         </div>
       </div>
     </div>
@@ -27,15 +28,18 @@ export default {
   },
   data () {
     return {
-      flipped: false
+      flipped: false,
+      exists: this.cardData.year !== 'x'
     }
   },
   methods: {
     flip () {
       this.flipped = true
+      this.$audio.play('release')
     },
     unflip () {
       this.flipped = false
+      this.$audio.play('release')
     },
     showDetails () {
       this.$matomo.trackEvent('jogo', 'viu detalhes', this.cardData.name)
@@ -92,6 +96,9 @@ export default {
   border: solid 1px black;
   font-size: 14pt;
   margin-top: .5rem;
+}
+.card-unexists {
+  font-size: 12pt;
 }
 .card-back {
     background-color: #7670b3;
