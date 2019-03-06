@@ -57,6 +57,13 @@ a {
   color: #2c3e50;
 }
 
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+
 .light-text {
   color: $light-color;
 }

@@ -17,9 +17,28 @@
 
     <p class="margin light-text x-font"><small>ARRASTE AS CARTAS E ORDENE-AS CRONOLOGICAMENTE</small></p>
 
-    <div class="viewport">
+    <!-- Timeline Scroll Menu -->
+    <div class="btn-anchor scroll-menu">
+      <div class="half text-right">
+        <transition name="fade">
+          <div v-show="timelineScroll.left">
+            <btn-x@click="scroll('timeline', -1)"><</btn-x>
+          </div>
+        </transition>
+      </div>
+      <div class="half text-left">
+        <transition name="fade">
+          <div v-show="timelineScroll.right">
+            <btn-x @click="scroll('timeline', 1)">></btn-x>
+          </div>
+        </transition>
+      </div>
+    </div>
+
+    <div class="viewport" ref="timeline" data-scroll="timeline">
       <draggable v-model="cardsInPlay" class="play-area" :options="{group:'card'}"
                  :style="{'min-width': playMinWidth}"
+                 ref="timelineContent"
                  @start="dragStart()" @end="dragEnd()">
         <card-object v-for="card in cardsInPlay" @openModal="openModal"
                      class="card-object"
@@ -28,7 +47,25 @@
       </draggable>
     </div>
 
-    <div class="viewport viewport-discard">
+    <!-- Discard Scroll Menu -->
+    <div v-show="discardScroll.left || discardScroll.right" class="btn-anchor scroll-menu">
+      <div class="half text-right">
+        <transition name="fade">
+          <div v-show="discardScroll.left">
+            <btn-x@click="scroll('discard', -1)"><</btn-x>
+          </div>
+        </transition>
+      </div>
+      <div class="half text-left">
+        <transition name="fade">
+          <div v-show="discardScroll.right">
+            <btn-x @click="scroll('discard', 1)">></btn-x>
+          </div>
+        </transition>
+      </div>
+    </div>
+
+    <div class="viewport viewport-discard" ref="discard" data-scroll="discard">
       <p class="discard-text x-font">não existe</p>
       <draggable v-model="discardPile" class="play-area discard-area"
                 :options="{group:'card', draggable: '.flip-container'}"
@@ -41,7 +78,7 @@
       </draggable>
     </div>
 
-    <div class="verif-cards-btn-anchor">
+    <div class="btn-anchor">
       <btn-x @click="checkCards">Verificar cartas</btn-x>
       <btn-x @click="restartGame">Novo jogo</btn-x>
     </div>
@@ -70,7 +107,15 @@ export default {
       modalProps: null,
       minWrongCardsCount: 0,
       triesCount: 0,
-      cardsOutOfBoard: true
+      cardsOutOfBoard: true,
+      timelineScroll: {
+        left: 0,
+        right: 0
+      },
+      discardScroll: {
+        left: 0,
+        right: 0
+      },
     }
   },
   components: {
@@ -80,6 +125,20 @@ export default {
   },
   mounted () {
     this.restartGame()
+
+    let self = this
+    this.$refs.timeline.addEventListener('scroll', this.updateScrollData)
+    this.$refs.discard.addEventListener('scroll', this.updateScrollData)
+    window.addEventListener('resize', this.updateScrollData)
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutationRecord) {
+        self.updateScrollData()
+      })
+    })
+    observer.observe(this.$refs.timelineContent.rootContainer, { attributes : true, attributeFilter : ['style'] })
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.updateScrollData)
   },
   computed: {
     discardMinWidth () {
@@ -90,6 +149,28 @@ export default {
     }
   },
   methods: {
+    updateScrollData (event) {
+      let obj, objData
+      obj = this.$refs.timeline
+      objData = this.timelineScroll
+      objData.left = obj.scrollLeft
+      objData.right = obj.scrollLeftMax - obj.scrollLeft
+      obj = this.$refs.discard
+      objData = this.discardScroll
+      objData.left = obj.scrollLeft
+      objData.right = obj.scrollLeftMax - obj.scrollLeft
+    },
+    scroll (objName, dir) {
+      let target = 200 * dir,
+          step = 10 * dir,
+          current = 0,
+          timer
+      timer = setInterval(() => {
+        this.$refs[objName].scrollLeft += step
+        current += step
+        if (Math.abs(current) >= Math.abs(target)) clearInterval(timer)
+      }, 20)
+    },
     allCardsComponents () {
       if (this.$refs.cardsInPlayComponents) {
         return this.$refs.cardsInPlayComponents.concat(this.$refs.discardPileComponents)
@@ -118,6 +199,7 @@ export default {
         this.$audio.play('distribute')
         await sleep(300)
       }
+
       this.cardsOutOfBoard = false
       this.$matomo.trackEvent('jogo', 'começou partida')
     },
@@ -284,7 +366,20 @@ export default {
   right: 10px;
   width: 40px;
 }
-.verif-cards-btn-anchor {
+.btn-anchor {
   z-index: 1;
+}
+.scroll-menu {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  .btn {
+    width: 3rem;
+    display: inline-block;
+  }
+}
+.half {
+  width: 50%;
+  padding: 0 .5rem;
 }
 </style>
