@@ -22,14 +22,14 @@
       <div class="half text-right">
         <transition name="fade">
           <div v-show="timelineScroll.left">
-            <btn-x @click="scroll('timeline', -1)" :sound="false"><</btn-x>
+            <btn-x @click="scroll('timeline', -1)" :sound="false">&lt;</btn-x>
           </div>
         </transition>
       </div>
       <div class="half text-left">
         <transition name="fade">
           <div v-show="timelineScroll.right">
-            <btn-x @click="scroll('timeline', 1)" :sound="false">></btn-x>
+            <btn-x @click="scroll('timeline', 1)" :sound="false">&gt;</btn-x>
           </div>
         </transition>
       </div>
@@ -52,14 +52,14 @@
       <div class="half text-right">
         <transition name="fade">
           <div v-show="discardScroll.left">
-            <btn-x@click="scroll('discard', -1)" :sound="false"><</btn-x>
+            <btn-x @click="scroll('discard', -1)" :sound="false">&lt;</btn-x>
           </div>
         </transition>
       </div>
       <div class="half text-left">
         <transition name="fade">
           <div v-show="discardScroll.right">
-            <btn-x @click="scroll('discard', 1)" :sound="false">></btn-x>
+            <btn-x @click="scroll('discard', 1)" :sound="false">&gt;</btn-x>
           </div>
         </transition>
       </div>
@@ -115,7 +115,7 @@ export default {
       discardScroll: {
         left: 0,
         right: 0
-      },
+      }
     }
   },
   components: {
@@ -130,12 +130,12 @@ export default {
     this.$refs.timeline.addEventListener('scroll', this.updateScrollData)
     this.$refs.discard.addEventListener('scroll', this.updateScrollData)
     window.addEventListener('resize', this.updateScrollData)
-    var observer = new MutationObserver(function(mutations) {
-      mutations.forEach(function(mutationRecord) {
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutationRecord) {
         self.updateScrollData()
       })
     })
-    observer.observe(this.$refs.timelineContent.rootContainer, { attributes : true, attributeFilter : ['style'] })
+    observer.observe(this.$refs.timelineContent.rootContainer, { attributes: true, attributeFilter: ['style'] })
   },
   beforeDestroy () {
     window.removeEventListener('resize', this.updateScrollData)
@@ -161,10 +161,13 @@ export default {
       objData.right = obj.scrollWidth - (obj.scrollLeft + obj.clientWidth)
     },
     scroll (objName, dir) {
-      let target = 200 * dir,
-          step = 10 * dir,
-          current = 0,
-          timer
+      let target = 200 * dir
+
+      let step = 10 * dir
+
+      let current = 0
+
+      let timer
       timer = setInterval(() => {
         this.$refs[objName].scrollLeft += step
         current += step
