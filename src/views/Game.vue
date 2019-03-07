@@ -154,11 +154,11 @@ export default {
       obj = this.$refs.timeline
       objData = this.timelineScroll
       objData.left = obj.scrollLeft
-      objData.right = obj.scrollLeftMax - obj.scrollLeft
+      objData.right = obj.scrollWidth - (obj.scrollLeft + obj.clientWidth)
       obj = this.$refs.discard
       objData = this.discardScroll
       objData.left = obj.scrollLeft
-      objData.right = obj.scrollLeftMax - obj.scrollLeft
+      objData.right = obj.scrollWidth - (obj.scrollLeft + obj.clientWidth)
     },
     scroll (objName, dir) {
       let target = 200 * dir,
