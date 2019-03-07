@@ -71,7 +71,7 @@ a {
   font-family: Insanibu;
 }
 .margin {
-  margin: 1rem 2rem;
+  margin: 1rem 3rem;
 }
 .sec-text {
   color: $sec-color;
