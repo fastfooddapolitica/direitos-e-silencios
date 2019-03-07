@@ -1,5 +1,5 @@
 <template>
-  <div class="flip-container" :class="{flip: flipped}">
+  <div class="flip-container" :class="{flip: flipped}" ref="cardRoot">
     <div class="flipper">
       <div class="front">
         <div class="card x-font">
@@ -20,6 +20,7 @@
 
 <script>
 import cardDetails from '@/components/cardDetails.vue'
+import {scrollIntoView} from '@/utils'
 
 export default {
   name: 'cardObject',
@@ -40,6 +41,9 @@ export default {
     unflip () {
       this.flipped = false
       this.$audio.play('release')
+    },
+    scrollIntoView () {
+      scrollIntoView(this.$refs.cardRoot)
     },
     showDetails () {
       this.$matomo.trackEvent('jogo', 'viu detalhes', this.cardData.name)

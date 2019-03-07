@@ -91,10 +91,7 @@ import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
 import modalBox from '@/components/modalBox.vue'
 import endGame from '@/components/endGame.vue'
-
-function sleep (time) {
-  return new Promise((resolve) => setTimeout(resolve, time))
-}
+import {scrollIntoView, sleep} from '@/utils'
 
 export default {
   name: 'home',
@@ -185,6 +182,7 @@ export default {
       this.closeModal()
       if (!this.cardsOutOfBoard) {
         this.cardsOutOfBoard = true
+        scrollIntoView(this.$refs.timeline)
         await sleep(2000)
       }
       this.unflipCards()
@@ -219,6 +217,7 @@ export default {
     async animatedFlip (card) {
       let comp = this.getCardComponent(card)
       if (!comp.flipped) {
+        comp.scrollIntoView()
         comp.flip()
         await sleep(1000)
       }
@@ -226,6 +225,7 @@ export default {
     async animatedUnflip (card) {
       let comp = this.getCardComponent(card)
       if (comp.flipped) {
+        comp.scrollIntoView()
         comp.unflip()
         await sleep(1000)
       }
