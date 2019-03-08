@@ -6,7 +6,6 @@
     <btn-x @click="$emit('flipCards')" v-if="!won">Revelar cartas</btn-x>
     <btn-x @click="$emit('tryAgain')" v-if="won">Ver cartas</btn-x>
     <btn-x @click="$emit('restartGame')">Novo jogo</btn-x>
-    <p>Muito obrigada por jogar! Queremos muito saber o que você achou para seguirmos desenvolvendo jogos sobre temas tão importantes. Por favor, responde essas <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVjVvijesilKEJkVz6wn-3LLrBbD26jFAZZuPJ6-HYrEa3wQ/viewform" target="_blank" rel="noopener noreferrer">perguntinhas aqui</a>? (Leva menos de três minutos).</p>
   </div>
 </template>
 

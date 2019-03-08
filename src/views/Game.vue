@@ -1,6 +1,18 @@
 <template>
   <div class="game-area">
 
+    <transition name="fade">
+      <div v-if="showFormMsg" class="form-msg">
+        <btn-x
+          class="close-btn"
+          @click="showFormMsg = false"
+          aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </btn-x>
+        <p>Muito obrigada por jogar! Queremos muito saber o que você achou para seguirmos desenvolvendo jogos sobre temas tão importantes. Por favor, responde essas <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVjVvijesilKEJkVz6wn-3LLrBbD26jFAZZuPJ6-HYrEa3wQ/viewform" target="_blank" rel="noopener noreferrer">perguntinhas aqui</a>? (Leva menos de três minutos).</p>
+      </div>
+    </transition>
+
     <modal-box modal-id="game" ref="modal">
       <component :is="modalComponent" v-bind="modalProps"
                  @tryAgain="closeModal" @flipCards="clickedFlipCards"
@@ -91,7 +103,7 @@ import cards from '@/assets/texts/cards.yml'
 import cardObject from '@/components/cardObject.vue'
 import modalBox from '@/components/modalBox.vue'
 import endGame from '@/components/endGame.vue'
-import {scrollIntoView, sleep} from '@/utils'
+import { scrollIntoView, sleep } from '@/utils'
 
 export default {
   name: 'home',
@@ -112,7 +124,9 @@ export default {
       discardScroll: {
         left: 0,
         right: 0
-      }
+      },
+      showFormMsg: false,
+      formMsgState: 'initial'
     }
   },
   components: {
@@ -263,6 +277,7 @@ export default {
         this.$audio.play('correct')
         // this.flipCards()
         this.$matomo.trackEvent('jogo', 'verificou cartas', 'acertou')
+        if (this.formMsgState === 'initial') this.formMsgState = 'prepare'
       } else {
         this.$audio.play('wrong')
         this.$matomo.trackEvent('jogo', 'verificou cartas', 'errou')
@@ -302,6 +317,10 @@ export default {
     },
     closeModal () {
       this.$refs.modal.close()
+      if (this.formMsgState === 'prepare') {
+        this.showFormMsg = true
+        this.formMsgState = 'done'
+      }
     }
   }
 }
@@ -403,5 +422,17 @@ export default {
 .half {
   width: 50%;
   padding: 0 .5rem;
+}
+.form-msg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  padding: .5rem .5rem 0 .5rem;
+  a {
+    color: $sec-color;
+  }
 }
 </style>
