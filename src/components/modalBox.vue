@@ -39,7 +39,10 @@ export default {
   },
   methods: {
     close () {
-      this.isOpen = false
+      if (this.isOpen) {
+        this.isOpen = false
+        this.$emit('closed')
+      }
     },
     open () {
       this.isOpen = true

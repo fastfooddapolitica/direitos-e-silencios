@@ -13,7 +13,7 @@
       </div>
     </transition>
 
-    <modal-box modal-id="game" ref="modal">
+    <modal-box modal-id="game" ref="modal" @closed="closeModal">
       <component :is="modalComponent" v-bind="modalProps"
                  @tryAgain="closeModal" @flipCards="clickedFlipCards"
                  @restartGame="restartGame"/>
