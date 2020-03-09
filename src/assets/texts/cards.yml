@@ -128,13 +128,13 @@
 
 -
   name: Criminalização da homofobia
-  year: x
+  year: 2019
   num: 7
-  description: Na CF de 88 é prevista a proibição de descriminação mediante orientação sexual, porém não existe ainda uma legislação vigente que regulamente isso. Em 2006, o PLC 122/2006 pretendia prever punição para discriminação por gênero, mas foi arquivado.
+  description: O STF decidiu criminalizar as condutas homofóbicas e transfóbicas, que terão penalidades parecidas com os crimes de racismo
   links:
     -
-      text: 'PROJETO DE LEI DA CÂMARA nº 122, de 2006 - (CRIMINALIZA A HOMOFOBIA)'
-      url: https://www25.senado.leg.br/web/atividade/materias/-/materia/79604
+      text: STF enquadra homofobia e transfobia como crimes de racismo ao reconhecer omissão legislativa'
+      url: http://www.stf.jus.br/portal/cms/verNoticiaDetalhe.asp?idConteudo=414010
 
 -
   name: Criminalização do racismo
@@ -409,18 +409,18 @@
 
 -
   name: Proibição legislativa do casamento infantil
-  year: x
+  year: 2019
   num: 27
   description:
-    - 'No ECA, Estatuto da Criança e do Adolescente, considera-se criança a pessoa de até 12 anos incompletos. O Código Civil de 2002 estabelece: A idade mínima para se casar mediante autorização dos pais ou representantes legais, é dezesseis anos. Porém, no Art. 1.520 é possível casar sem ter atingido a idade mínima, para então, evitar imposição ou cumprimento de pena criminal ou em caso de gravidez. Não havendo limite de idade aparente para se proibir um casamento. Atualmente, o Brasil tem o maior número de casos de casamento infantil da América Latina e o quarto no mundo.'
-    - “Em 2005, a Lei 11.160 revogou os incisos VII e VIII do artigo 107 do Código Penal, que previam o casamento do estuprador com sua vítima como causa extintiva da punibilidade”. Porém, a lei civil mantém a possibilidade de autorização excepcional do casamento para o caso de crimes sexuais cometidos contra meninas.
+    - 'No ECA, Estatuto da Criança e do Adolescente, considera-se criança a pessoa de até 12 anos incompletos. O Código Civil de 2002 estabelece: A idade mínima para se casar mediante autorização dos pais ou representantes legais, é dezesseis anos. Porém, até 2019, no Art. 1.520 era possível casar sem ter atingido a idade mínima, para então, evitar imposição ou cumprimento de pena criminal ou em caso de gravidez. Não havendo limite de idade aparente para se proibir um casamento. Atualmente, o Brasil tem o maior número de casos de casamento infantil da América Latina e o quarto no mundo.'
+    - “Em 2005, a Lei 11.160 revogou os incisos VII e VIII do artigo 107 do Código Penal, que previam o casamento do estuprador com sua vítima como causa extintiva da punibilidade”. Porém, até 2019 a lei civil mantinha a possibilidade de autorização excepcional do casamento para o caso de crimes sexuais cometidos contra meninas. Em 12 de Março de 2019 foi sancionada a lei 13.811, que proíbe o casamento de pessoas menores de 16 anos.
   links:
     -
       text: O que a vigência do artigo 1520 do Código Civil diz sobre a percepção do estupro?
       url: https://jus.com.br/artigos/56710/o-que-a-vigencia-do-artigo-1520-do-codigo-civil-diz-sobre-a-percepcao-do-estupro
     -
-      text: Lei brasileira tem brechas que incentivam o casamento infantil no país, alerta Banco Mundial
-      url: http://g1.globo.com/mundo/noticia/lei-brasileira-tem-brechas-que-incentivam-o-casamento-infantil-no-pais-alerta-banco-mundial.ghtml
+      text: Lei 13.811, de 12 de Março de 2019
+      url: http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13811.htm    
     -
       text: Banco Mundial lança relatório sobre casamento infantil
       url: http://www.onumulheres.org.br/noticias/banco-mundial-lanca-relatorio-sobre-casamento-infantil/
