@@ -46,7 +46,7 @@ export default {
       scrollIntoView(this.$refs.cardRoot)
     },
     showDetails () {
-      this.$matomo.trackEvent('jogo', 'viu detalhes', this.cardData.name)
+      // this.$matomo.trackEvent('jogo', 'viu detalhes', this.cardData.name)
       this.$emit(
         'openModal',
         {
