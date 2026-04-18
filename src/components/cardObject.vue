@@ -20,7 +20,7 @@
 
 <script>
 import cardDetails from '@/components/cardDetails.vue'
-import {scrollIntoView} from '@/utils'
+import { scrollIntoView } from '@/utils'
 
 export default {
   name: 'cardObject',

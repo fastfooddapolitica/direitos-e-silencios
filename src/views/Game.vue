@@ -137,7 +137,7 @@ export default {
   mounted () {
     this.restartGame()
 
-    let self = this
+    const self = this
     this.$refs.timeline.addEventListener('scroll', this.updateScrollData)
     this.$refs.discard.addEventListener('scroll', this.updateScrollData)
     window.addEventListener('resize', this.updateScrollData)
@@ -172,14 +172,13 @@ export default {
       objData.right = obj.scrollWidth - (obj.scrollLeft + obj.clientWidth)
     },
     scroll (objName, dir) {
-      let target = 200 * dir
+      const target = 200 * dir
 
-      let step = 10 * dir
+      const step = 10 * dir
 
       let current = 0
 
-      let timer
-      timer = setInterval(() => {
+      const timer = setInterval(() => {
         this.$refs[objName].scrollLeft += step
         current += step
         if (Math.abs(current) >= Math.abs(target)) clearInterval(timer)
@@ -229,7 +228,7 @@ export default {
       }
     },
     async animatedFlip (card) {
-      let comp = this.getCardComponent(card)
+      const comp = this.getCardComponent(card)
       if (!comp.flipped) {
         comp.scrollIntoView()
         comp.flip()
@@ -237,7 +236,7 @@ export default {
       }
     },
     async animatedUnflip (card) {
-      let comp = this.getCardComponent(card)
+      const comp = this.getCardComponent(card)
       if (comp.flipped) {
         comp.scrollIntoView()
         comp.unflip()
