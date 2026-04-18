@@ -1,18 +1,5 @@
 <template>
   <div class="game-area">
-
-    <transition name="fade">
-      <div v-if="showFormMsg" class="form-msg">
-        <btn-x
-          class="close-btn"
-          @click="showFormMsg = false"
-          aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </btn-x>
-        <p>Muito obrigada por jogar! Queremos muito saber o que você achou para seguirmos desenvolvendo jogos sobre temas tão importantes. Por favor, responde essas <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVjVvijesilKEJkVz6wn-3LLrBbD26jFAZZuPJ6-HYrEa3wQ/viewform" target="_blank" rel="noopener noreferrer">perguntinhas aqui</a>? (Leva menos de três minutos).</p>
-      </div>
-    </transition>
-
     <modal-box modal-id="game" ref="modal" @closed="closeModal">
       <component :is="modalComponent" v-bind="modalProps"
                  @tryAgain="closeModal" @flipCards="clickedFlipCards"
@@ -124,9 +111,7 @@ export default {
       discardScroll: {
         left: 0,
         right: 0
-      },
-      showFormMsg: false,
-      formMsgState: 'initial'
+      }
     }
   },
   components: {
@@ -275,7 +260,6 @@ export default {
       if (this.rightSequence) {
         this.$audio.play('correct')
         // this.$matomo.trackEvent('jogo', 'verificou cartas', 'acertou')
-        if (this.formMsgState === 'initial') this.formMsgState = 'prepare'
       } else {
         this.$audio.play('wrong')
         // this.$matomo.trackEvent('jogo', 'verificou cartas', 'errou')
@@ -315,10 +299,6 @@ export default {
     },
     closeModal () {
       this.$refs.modal.close()
-      if (this.formMsgState === 'prepare') {
-        this.showFormMsg = true
-        this.formMsgState = 'done'
-      }
     }
   }
 }
